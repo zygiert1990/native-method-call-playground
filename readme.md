@@ -13,3 +13,9 @@ gcc -shared -fPIC \
  -I"$(sdk home java $(sdk current java | awk '{print $NF}'))/include/linux" \
  native/PowerCalculator.c -o lib/libnative-power-calculator.so -lm
 ```
+
+## Run Main Class
+`scala-cli . --main-class methods.Main --power`
+
+## Rub JMH Benchmark
+`scala-cli . --jmh --power`
