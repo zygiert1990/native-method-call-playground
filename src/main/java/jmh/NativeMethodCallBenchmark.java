@@ -38,7 +38,7 @@ public class NativeMethodCallBenchmark {
     }
 
     @Benchmark
-    public void benchmark__StrictMath_Power_Calculator(Blackhole bh) {
+    public void benchmark_Strict_Math_Power_Calculator(Blackhole bh) {
         bh.consume(StrictMathPowerCalculator.calculate(2.0, 10.0));
     }
 }
