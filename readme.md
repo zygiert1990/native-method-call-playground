@@ -17,5 +17,5 @@ gcc -shared -fPIC \
 ## Run Main Class
 `scala-cli . --main-class methods.Main --power`
 
-## Rub JMH Benchmark
+## Run JMH Benchmark
 `scala-cli . --jmh --power`
