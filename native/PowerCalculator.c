@@ -23,12 +23,12 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved) {
     return JNI_VERSION_1_8;
 }
 
-JNIEXPORT jdouble JNICALL Java_StatelessPowerCalculator_calculate
+JNIEXPORT jdouble JNICALL Java_methods_StatelessPowerCalculator_calculate
   (JNIEnv *env, jclass clazz, jdouble base, jdouble exponent) {
     return pow(base, exponent);
 }
 
-JNIEXPORT jdouble JNICALL Java_StatefulPowerCalculator_calculate
+JNIEXPORT jdouble JNICALL Java_methods_StatefulPowerCalculator_calculate
   (JNIEnv *env, jobject thisObj) {
     
     jdouble base = (*env)->GetDoubleField(env, thisObj, baseId);
