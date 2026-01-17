@@ -1,3 +1,5 @@
+package methods;
+
 public class StatelessPowerCalculator {
     static {
         System.loadLibrary("native-power-calculator");

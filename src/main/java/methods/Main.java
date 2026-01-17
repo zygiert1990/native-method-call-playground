@@ -1,3 +1,5 @@
+package methods;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Static Result: " + StatelessPowerCalculator.calculate(2, 10));
