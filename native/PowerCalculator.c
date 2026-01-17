@@ -14,7 +14,7 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved) {
     }
 
     // Find the class
-    jclass cls = (*env)->FindClass(env, "methods.StatefulPowerCalculator");
+    jclass cls = (*env)->FindClass(env, "methods/StatefulPowerCalculator");
     
     // Cache the IDs now, once and for all
     baseId = (*env)->GetFieldID(env, cls, "base", "D");

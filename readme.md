@@ -11,5 +11,5 @@
 gcc -shared -fPIC \
  -I"$(sdk home java $(sdk current java | awk '{print $NF}'))/include" \
  -I"$(sdk home java $(sdk current java | awk '{print $NF}'))/include/linux" \
- native/PowerCalculator.c -o lib/native-power-calculator.so -lm
+ native/PowerCalculator.c -o lib/libnative-power-calculator.so -lm
 ```
