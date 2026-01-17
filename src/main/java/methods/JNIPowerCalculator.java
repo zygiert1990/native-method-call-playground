@@ -1,6 +1,6 @@
 package methods;
 
-public class StatelessPowerCalculator {
+public class JNIPowerCalculator {
     static {
         System.loadLibrary("native-power-calculator");
     }

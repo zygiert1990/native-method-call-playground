@@ -17,19 +17,9 @@ public class NativeMethodCallBenchmark {
 
     private StatefulPowerCalculator statefulPowerCalculator;
 
-    @Setup
-    public void setup() {
-        statefulPowerCalculator = new StatefulPowerCalculator(2.0, 10.0);
-    }
-
     @Benchmark
-    public void benchmark_JNI_Stateless_Power_Calculator(Blackhole bh) {
-        bh.consume(StatelessPowerCalculator.calculate(2.0, 10.0));
-    }
-
-    @Benchmark
-    public void benchmark_JNI_Stateful_Power_Calculator(Blackhole bh) {
-        bh.consume(statefulPowerCalculator.calculate());
+    public void benchmark_JNI_Power_Calculator(Blackhole bh) {
+        bh.consume(JNIPowerCalculator.calculate(2.0, 10.0));
     }
 
     @Benchmark
