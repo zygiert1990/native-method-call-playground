@@ -4,7 +4,7 @@
 
 ## Compile `libnative-power-calculator.so`
 
-1. Generate header files: `javac -h native/ src/main/java/StatefulPowerCalculator.java src/main/java/StatelessPowerCalculator.java`
+1. Generate header files: `javac -h native/ src/main/java/methods/StatefulPowerCalculator.java src/main/java/methods/StatelessPowerCalculator.java`
 2. In project `root` directory create `lib` dir: `mkdir lib`
 3. Compile a native library (I was using `sdkman` to install `java`):
 ```

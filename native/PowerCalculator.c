@@ -1,7 +1,7 @@
 #include <jni.h>
 #include <math.h>
-#include "StatefulPowerCalculator.h"
-#include "StatelessPowerCalculator.h"
+#include "methods_StatefulPowerCalculator.h"
+#include "methods_StatelessPowerCalculator.h"
 
 jfieldID baseId;
 jfieldID exponentId;
