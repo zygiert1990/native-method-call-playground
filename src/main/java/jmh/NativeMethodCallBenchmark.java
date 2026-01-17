@@ -15,8 +15,6 @@ import methods.*;
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 public class NativeMethodCallBenchmark {
 
-    private StatefulPowerCalculator statefulPowerCalculator;
-
     @Benchmark
     public void benchmark_JNI_Power_Calculator(Blackhole bh) {
         bh.consume(JNIPowerCalculator.calculate(2.0, 10.0));
