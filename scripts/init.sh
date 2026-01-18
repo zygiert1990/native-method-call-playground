@@ -14,7 +14,7 @@ cd /opt/
 curl -LO https://download.java.net/java/early_access/jextract/25/2/openjdk-25-jextract+2-4_linux-x64_bin.tar.gz
 tar -xzf openjdk-25-jextract+2-4_linux-x64_bin.tar.gz
 ## Get hsdis library
-wget "https://chriswhocodes.com/hsdis/hsdis-amd64.so" -P "$JAVA_HOME/lib/server/"
+wget "https://chriswhocodes.com/hsdis/hsdis-amd64.so" -P "$HOME/.sdkman/candidates/java/25.0.1-tem/lib/server/"
 ## Setup project
 cd ~/native-method-call-playground/
 javac -h native/ src/main/java/methods/JNIPowerCalculator.java
