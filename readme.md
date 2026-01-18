@@ -10,6 +10,19 @@ native: 0.7.14 (linux x86_64)`
 
 `Scala CLI version: 1.12.0`
 
+## Warning!
+
+Project does not compile before generating helper class with `jextract`.
+
+## Prerequisites
+
+For compiling `libnative-power-calculator.so` you need `gcc` installed: `apt install build-essential`
+
+To use `jextarct`:
+- `cd /opt/`
+- find proper url on [jextract](https://jdk.java.net/jextract/) - then `curl -LO <proper_url>`
+- `tar -xzf openjdk-25-jextract+2-4_linux-x64_bin.tar.gz` (file name might differ, depends on downloaded archive)
+
 ## Compile `libnative-power-calculator.so`
 
 1. Generate header file: `javac -h native/ src/main/java/methods/JNIPowerCalculator.java`
@@ -20,6 +33,15 @@ gcc -shared -fPIC \
  -I"$JAVA_HOME/include" \
  -I"$JAVA_HOME/include/linux" \
  native/PowerCalculator.c -o lib/libnative-power-calculator.so -lm
+```
+
+4. Generate helper class to call native function using `jextarct` - [math_h.java](./files/math_h.java):
+```
+/opt/jextract-25/bin/jextract --output src/main/java \
+-t math \
+-lm \
+/usr/include/math.h \
+--include-function pow
 ```
 
 ## Run Main Class
