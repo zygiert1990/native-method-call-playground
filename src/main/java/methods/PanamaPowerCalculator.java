@@ -2,14 +2,17 @@ package methods;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.foreign.*;
+import java.util.Map;
 
 public class PanamaPowerCalculator {
     private static final MethodHandle METHOD_HANDLE;
 
     static {
         Linker linker = Linker.nativeLinker();
+        Map<String, MemoryLayout> layouts = linker.canonicalLayouts();
         MemorySegment symbol = linker.defaultLookup().find("pow").get();
-        FunctionDescriptor fd = FunctionDescriptor.of(ValueLayout.JAVA_DOUBLE, ValueLayout.JAVA_DOUBLE, ValueLayout.JAVA_DOUBLE);
+        ValueLayout cDouble = (ValueLayout) layouts.get("double");
+        FunctionDescriptor fd = FunctionDescriptor.of(cDouble, cDouble, cDouble);
         METHOD_HANDLE = linker.downcallHandle(symbol, fd);
     }
 
