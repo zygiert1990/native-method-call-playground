@@ -24,6 +24,8 @@ You can either follow all the steps manually or initialize the environment using
 5. `chmod +x scripts/init.sh`
 6. `./scripts/init.sh`
 
+After this you can jump to [Running app and benchmarks](#run-main-class)
+
 ## Manual steps
 
 For compiling `libnative-power-calculator.so` you need `gcc` installed: `apt install build-essential`
