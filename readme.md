@@ -22,7 +22,7 @@ You can either follow all the steps manually or initialize the environment using
 3. `git clone https://github.com/zygiert1990/native-method-call-playground.git`
 4. `cd native-method-call-playground/`
 5. `chmod +x scripts/init.sh`
-6. `./scripts/init.sh`
+6. `source ./scripts/init.sh`
 
 After this you can jump to [Running app and benchmarks](#run-main-class)
 
