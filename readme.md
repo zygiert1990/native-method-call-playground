@@ -17,10 +17,12 @@ Project does not compile before generating helper class with `jextract`.
 ## Prerequisites
 
 You can either follow all the steps manually or initialize the environment using [init-script](scripts/init.sh):
-1. `git clone https://github.com/zygiert1990/native-method-call-playground.git`
-2. `cd native-method-call-playground/`
-3. `chmod +x scripts/init.sh`
-4. `./scripts/init.sh`
+1. `sudo -i`
+2. `apt install git -y`
+3. `git clone https://github.com/zygiert1990/native-method-call-playground.git`
+4. `cd native-method-call-playground/`
+5. `chmod +x scripts/init.sh`
+6. `./scripts/init.sh`
 
 ## Manual steps
 
