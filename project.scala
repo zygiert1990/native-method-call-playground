@@ -3,3 +3,4 @@
 //> using javaOpt "-Djava.library.path=./lib"
 //> using javaOpt "--enable-native-access=ALL-UNNAMED"
 //> using jmh
+//> using javaHome ${?JAVA_HOME}
