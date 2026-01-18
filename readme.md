@@ -39,7 +39,6 @@ gcc -shared -fPIC \
 ```
 /opt/jextract-25/bin/jextract --output src/main/java \
 -t math \
--lm \
 /usr/include/math.h \
 --include-function pow
 ```
