@@ -18,7 +18,7 @@ Project does not compile before generating helper class with `jextract`.
 
 For compiling `libnative-power-calculator.so` you need `gcc` installed: `apt install build-essential`
 
-To use `jextarct`:
+To use `jextract`:
 - `cd /opt/`
 - find proper url on [jextract](https://jdk.java.net/jextract/) - then `curl -LO <proper_url>`
 - `tar -xzf openjdk-25-jextract+2-4_linux-x64_bin.tar.gz` (file name might differ, depends on downloaded archive)
@@ -35,7 +35,7 @@ gcc -shared -fPIC \
  native/PowerCalculator.c -o lib/libnative-power-calculator.so -lm
 ```
 
-4. Generate helper class to call native function using `jextarct` - [math_h.java](./files/math_h.java):
+4. Generate helper class to call native function using `jextarct` - [math_h.java](.files/math_h.java):
 ```
 /opt/jextract-25/bin/jextract --output src/main/java \
 -t math \
