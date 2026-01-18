@@ -1,10 +1,7 @@
 package methods;
 
 import java.lang.invoke.MethodHandle;
-import java.lang.foreign.FunctionDescriptor;
-import java.lang.foreign.ValueLayout;
-import java.lang.foreign.MemorySegment;
-import java.lang.foreign.Linker;
+import java.lang.foreign.*;
 
 public class PanamaPowerCalculator {
     private static final MethodHandle METHOD_HANDLE;
