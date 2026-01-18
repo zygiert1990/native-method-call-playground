@@ -12,7 +12,7 @@ native: 0.7.14 (linux x86_64)`
 
 ## Warning!
 
-Project does not compile before generating helper class with `jextract`.
+Project does not compile before generating helper class with `jextract` and compile `libnative-power-calculator.so`.
 
 ## Prerequisites
 
