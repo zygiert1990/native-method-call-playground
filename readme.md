@@ -17,8 +17,8 @@ native: 0.7.14 (linux x86_64)`
 3. Compile a native library (I was using `sdkman` to install `java`):
 ```
 gcc -shared -fPIC \
- -I"$(sdk home java $(sdk current java | awk '{print $NF}'))/include" \
- -I"$(sdk home java $(sdk current java | awk '{print $NF}'))/include/linux" \
+ -I"$JAVA_HOME/include" \
+ -I"$JAVA_HOME/include/linux" \
  native/PowerCalculator.c -o lib/libnative-power-calculator.so -lm
 ```
 
