@@ -59,7 +59,7 @@ gcc -shared -fPIC \
 ```
 
 ## Run Main Class
-`scala-cli . --main-class methods.Main --power`
+`scala-cli . --main-class methods.Main --java-opt -XX:+PrintCompilation --power`
 
 ## Run JMH Benchmark
 `scala-cli . --jmh --power`
