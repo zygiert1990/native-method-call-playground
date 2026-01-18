@@ -1,11 +1,11 @@
 package methods;
 
-import math.math_h;
+import math.NativeMath;
 
 public class PanamaJExtractPowerCalculator {
 
     public static double calculate(double base, double exponent) {
-        return math_h.pow(base, exponent);
+        return NativeMath.pow(base, exponent);
     }
 
 }

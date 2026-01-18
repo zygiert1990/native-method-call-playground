@@ -12,9 +12,9 @@ import java.util.stream.*;
 import static java.lang.foreign.ValueLayout.*;
 import static java.lang.foreign.MemoryLayout.PathElement.*;
 
-public class math_h extends math_h$shared {
+public class NativeMath extends NativeMath$shared {
 
-    math_h() {
+    NativeMath() {
         // Should not be called directly
     }
 
@@ -26,9 +26,9 @@ public class math_h extends math_h$shared {
 
     private static class pow {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-                math_h.C_DOUBLE,
-                math_h.C_DOUBLE,
-                math_h.C_DOUBLE
+                NativeMath.C_DOUBLE,
+                NativeMath.C_DOUBLE,
+                NativeMath.C_DOUBLE
         );
 
         public static final MemorySegment ADDR = SYMBOL_LOOKUP.findOrThrow("pow");

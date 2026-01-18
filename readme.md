@@ -35,11 +35,12 @@ gcc -shared -fPIC \
  native/PowerCalculator.c -o lib/libnative-power-calculator.so -lm
 ```
 
-4. Generate helper class to call native function using `jextarct` - [math_h.java](.files/math_h.java):
+4. Generate helper class to call native function using `jextarct` - [math_h.java](.files/NativeMath.java):
 ```
 /opt/jextract-25/bin/jextract --output src/main/java \
 -t math \
 /usr/include/math.h \
+--header-class-name NativeMath \
 --include-function pow
 ```
 
