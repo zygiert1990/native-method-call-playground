@@ -6,6 +6,10 @@ public class Main {
         System.out.println("Panama Invoke Exact Result: " + runPanamaInvokeExactPowerCalculator());
         System.out.println("Panama Invoke Result: " + runPanamaInvokePowerCalculator());
         System.out.println("Panama JExtract Result: " + runPanamaJExtractPowerCalculator());
+        System.out.println("JNI Result: " + runJNIPowerCalculator());
+        System.out.println("Panama Invoke Exact Result: " + runPanamaInvokeExactPowerCalculator());
+        System.out.println("Panama Invoke Result: " + runPanamaInvokePowerCalculator());
+        System.out.println("Panama JExtract Result: " + runPanamaJExtractPowerCalculator());
         Thread.sleep(60000);
     }
 
