@@ -6,7 +6,9 @@ curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 25.0.1-tem
 sdk install scalacli 1.12.0
-source .bashrc
+source ~/.bashrc
+echo 'JAVA_HOME'
+echo $JAVA_HOME
 ## Install jextract
 cd /opt/
 curl -LO https://download.java.net/java/early_access/jextract/25/2/openjdk-25-jextract+2-4_linux-x64_bin.tar.gz
