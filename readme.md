@@ -16,6 +16,14 @@ Project does not compile before generating helper class with `jextract`.
 
 ## Prerequisites
 
+You can either follow all the steps manually or initialize the environment using [init-script](scripts/init.sh):
+1. `git clone https://github.com/zygiert1990/native-method-call-playground.git`
+2. `cd native-method-call-playground/`
+3. `chmod +x scripts/init.sh`
+4. `./scripts/init.sh`
+
+## Manual steps
+
 For compiling `libnative-power-calculator.so` you need `gcc` installed: `apt install build-essential`
 
 To use `jextract`:
@@ -35,7 +43,9 @@ gcc -shared -fPIC \
  native/PowerCalculator.c -o lib/libnative-power-calculator.so -lm
 ```
 
-4. Generate helper class to call native function using `jextarct` - [math_h.java](.files/NativeMath.java):
+## Generate `NativeMath` helper class
+
+1. Generate using `jextarct` - [math_h.java](.files/NativeMath.java):
 ```
 /opt/jextract-25/bin/jextract --output src/main/java \
 -t math \
