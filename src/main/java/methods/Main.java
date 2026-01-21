@@ -15,32 +15,32 @@ public class Main {
 
     private static long runJNIPowerCalculator() {
         var result = 0L;
-        for (int i =0; i < 1_000_000; i++) {
-            result += JNIPowerCalculator.calculate(2, 10);
+        for (int i = 0; i < 1_000_000; i++) {
+            result += JNIPowerCalculator.calculate((double) i, 2.0);
         }
         return result;
     }
 
     private static long runPanamaInvokeExactPowerCalculator() {
         var result = 0L;
-        for (int i =0; i < 1_000_000; i++) {
-            result += PanamaPowerCalculator.calculateInvokeExact(2, 10);
+        for (int i = 0; i < 1_000_000; i++) {
+            result += PanamaPowerCalculator.calculateInvokeExact((double) i, 2.0);
         }
         return result;
     }
 
     private static long runPanamaInvokePowerCalculator() {
         var result = 0L;
-        for (int i =0; i < 1_000_000; i++) {
-            result += PanamaPowerCalculator.calculateInvoke(2, 10);
+        for (int i = 0; i < 1_000_000; i++) {
+            result += PanamaPowerCalculator.calculateInvoke(i, 2);
         }
         return result;
     }
 
     private static long runPanamaJExtractPowerCalculator() {
         var result = 0L;
-        for (int i =0; i < 1_000_000; i++) {
-            result += PanamaJExtractPowerCalculator.calculate(2, 10);
+        for (int i = 0; i < 1_000_000; i++) {
+            result += PanamaJExtractPowerCalculator.calculate((double) i, 2.0);
         }
         return result;
     }
