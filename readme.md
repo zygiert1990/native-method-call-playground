@@ -62,11 +62,12 @@ gcc -shared -fPIC \
 `scala-cli . --jmh --power`
 
 ```
-Benchmark                                                                 Mode  Cnt   Score   Error  Units
-NativeMethodCallBenchmark.benchmark_JNI_Power_Calculator                  avgt   15  34.281 ? 0.103  ns/op
-NativeMethodCallBenchmark.benchmark_Panama_Invoke_Exact_Power_Calculator  avgt   15  29.249 ? 0.119  ns/op
-NativeMethodCallBenchmark.benchmark_Panama_Invoke_Power_Calculator        avgt   15  34.058 ? 0.228  ns/op
-NativeMethodCallBenchmark.benchmark_Panama_J_Extract_Power_Calculator     avgt   15  29.323 ? 0.179  ns/op
+Benchmark                                                                              Mode  Cnt   Score   Error  Units
+NativeMethodCallBenchmark.benchmark_JNI_Power_Calculator                               avgt   15  34.659 ? 0.198  ns/op
+NativeMethodCallBenchmark.benchmark_Panama_Invoke_Exact_Power_Calculator               avgt   15  29.541 ? 0.222  ns/op
+NativeMethodCallBenchmark.benchmark_Panama_Invoke_With_Conversion_Power_Calculator     avgt   15  34.310 ? 0.312  ns/op
+NativeMethodCallBenchmark.benchmark_Panama_Invoke_Without_Conversion_Power_Calculator  avgt   15  29.554 ? 0.138  ns/op
+NativeMethodCallBenchmark.benchmark_Panama_J_Extract_Power_Calculator                  avgt   15  29.413 ? 0.067  ns/op
 ```
 
 ## Run JMH Benchmark with profiler
