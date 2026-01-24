@@ -1,6 +1,6 @@
 #!/bin/bash
 ## Install necessary libs
-apt install zip unzip build-essential -y
+apt install zip unzip build-essential linux-perf -y
 ## Install sdkman & tools
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"

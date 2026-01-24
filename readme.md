@@ -71,3 +71,6 @@ NativeMethodCallBenchmark.benchmark_Panama_Invoke_Exact_Power_Calculator  avgt  
 NativeMethodCallBenchmark.benchmark_Panama_Invoke_Power_Calculator        avgt   15  34.058 ? 0.228  ns/op
 NativeMethodCallBenchmark.benchmark_Panama_J_Extract_Power_Calculator     avgt   15  29.323 ? 0.179  ns/op
 ```
+
+## Run JMH Benchmark with profiler
+`scala-cli . --jmh --power -- -f 1 -prof "perfasm:events=cpu-clock;intel=true"`
