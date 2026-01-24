@@ -1,0 +1,806 @@
+# JMH version: 1.37
+# VM version: JDK 25.0.1, OpenJDK 64-Bit Server VM, 25.0.1+8-LTS
+# VM invoker: /root/.sdkman/candidates/java/25.0.1-tem/bin/java
+# VM options: -Djava.library.path=./lib --enable-native-access=ALL-UNNAMED -Dscala.sources=/root/native-method-call-playground/native/PowerCalculator.c:/root/native-method-call-playground/native/methods_JNIPowerCalculator.h:/root/native-method-call-playground/project.scala:/root/native-method-call-playground/src/main/java/jmh/NativeMethodCallBenchmark.java:/root/native-method-call-playground/src/main/java/math/NativeMath$shared.java:/root/native-method-call-playground/src/main/java/math/NativeMath.java:/root/native-method-call-playground/src/main/java/methods/JNIPowerCalculator.java:/root/native-method-call-playground/src/main/java/methods/PanamaJExtractPowerCalculator.java:/root/native-method-call-playground/src/main/java/methods/PanamaPowerCalculator.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B1.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B2.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B3.java -Dscala.source.names=PowerCalculator.c:methods_JNIPowerCalculator.h:project.scala:NativeMethodCallBenchmark.java:NativeMath$shared.java:NativeMath.java:JNIPowerCalculator.java:PanamaJExtractPowerCalculator.java:PanamaPowerCalculator.java:NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_jmhType.java:NativeMethodCallBenchmark_jmhType_B1.java:NativeMethodCallBenchmark_jmhType_B2.java:NativeMethodCallBenchmark_jmhType_B3.java
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.NativeMethodCallBenchmark.benchmark_JNI_Power_Calculator
+
+# Run progress: 0.00% complete, ETA 00:00:50
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfAsmProfiler
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 39.941 ns/op
+# Warmup Iteration   2: 37.125 ns/op
+# Warmup Iteration   3: 37.367 ns/op
+# Warmup Iteration   4: 34.790 ns/op
+# Warmup Iteration   5: 34.748 ns/op
+Iteration   1: 34.664 ns/op
+Iteration   2: 34.609 ns/op
+Iteration   3: 34.801 ns/op
+Iteration   4: 34.649 ns/op
+Iteration   5: 36.528 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler
+
+
+Result "jmh.NativeMethodCallBenchmark.benchmark_JNI_Power_Calculator":
+  35.050 ?(99.9%) 3.193 ns/op [Average]
+  (min, avg, max) = (34.609, 35.050, 36.528), stdev = 0.829
+  CI (99.9%): [31.857, 38.244] (assumes normal distribution)
+
+Secondary result "jmh.NativeMethodCallBenchmark.benchmark_JNI_Power_Calculator:asm":
+PrintAssembly processed: 217698 total address lines.
+Perf output processed (skipped 14.045 seconds):
+ Column 1: cpu-clock (5322 events)
+
+Hottest code regions (>10.00% "cpu-clock" events):
+ Event counts are percents of total event count.
+
+....[Hottest Region 1]..............................................................................
+libm.so.6, [unknown]
+
+ <no assembly is recorded, native region>
+....................................................................................................
+  44.85%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+Unknown, level 0, methods.JNIPowerCalculator::calculate, version 1, compile id 1220
+
+   0.86%      0x00007fc37fef12be:   lea    r14,[rsp+0x30]
+              0x00007fc37fef12c3:   mov    rsi,r14
+          ?   0x00007fc37fef12c6:   vzeroupper
+   0.90%  ?   0x00007fc37fef12c9:   movabs r10,0x7fc37fef12c6           ;   {internal_word}
+              0x00007fc37fef12d3:   mov    QWORD PTR [r15+0x488],r10
+   0.88%      0x00007fc37fef12da:   mov    QWORD PTR [r15+0x480],rsp
+              0x00007fc37fef12e1:   lea    rdi,[r15+0x4a0]
+              0x00007fc37fef12e8:   mov    DWORD PTR [r15+0x52c],0x4
+              0x00007fc37fef12f3:   call   0x00007fc394a76109           ;   {runtime_call Java_methods_JNIPowerCalculator_calculate}
+              0x00007fc37fef12f8:   vzeroupper
+   1.00%      0x00007fc37fef12fb:   mov    DWORD PTR [r15+0x52c],0x5
+              0x00007fc37fef1306:   lock add DWORD PTR [rsp-0x40],0x0
+  16.97%      0x00007fc37fef130c:   cmp    rbp,QWORD PTR [r15+0x28]
+           ?  0x00007fc37fef1310:   ja     0x00007fc37fef1324
+   0.08%   ?  0x00007fc37fef1316:   cmp    DWORD PTR [r15+0x528],0x0
+           ?  0x00007fc37fef131e:   je     0x00007fc37fef134a
+           ?  0x00007fc37fef1324:   vzeroupper
+              0x00007fc37fef1327:   vmovsd QWORD PTR [rbp-0x8],xmm0
+              0x00007fc37fef132c:   mov    rdi,r15
+              0x00007fc37fef132f:   mov    r12,rsp
+              0x00007fc37fef1332:   sub    rsp,0x0
+              0x00007fc37fef1336:   and    rsp,0xfffffffffffffff0
+              0x00007fc37fef133a:   call   0x00007fc398a3cbb0           ;   {runtime_call JavaThread::check_special_condition_for_native_trans(JavaThread*)}
+              0x00007fc37fef133f:   mov    rsp,r12
+              0x00007fc37fef1342:   xor    r12,r12
+....................................................................................................
+  18.04%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+  44.85%                      libm.so.6  [unknown]
+  18.04%               Unknown, level 0  methods.JNIPowerCalculator::calculate, version 1, compile id 1220
+   8.31%                      libm.so.6  pow
+   6.09%  libnative-power-calculator.so  Java_methods_JNIPowerCalculator_calculate
+   5.17%               Unknown, level 0  methods.JNIPowerCalculator::calculate, version 1, compile id 1220
+   4.08%               Unknown, level 0  methods.JNIPowerCalculator::calculate, version 1, compile id 1220
+   3.04%                    c2, level 4  jmh.jmh_generated.NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest::benchmark_JNI_Power_Calculator_avgt_jmhStub, version 6, compile id 1261
+   1.95%              [kernel.kallsyms]  syscall_enter_from_user_mode
+   1.32%                      libc.so.6  write
+   1.30%                      libc.so.6  syscall
+   1.11%               Unknown, level 0  methods.JNIPowerCalculator::calculate, version 1, compile id 1220
+   0.77%                      libm.so.6  @plt
+   0.39%                      libjvm.so  ElfSymbolTable::lookup
+   0.15%              [kernel.kallsyms]  _raw_spin_unlock_irqrestore
+   0.11%              [kernel.kallsyms]  mutex_unlock
+   0.11%              [kernel.kallsyms]  mutex_lock
+   0.09%              [kernel.kallsyms]  _raw_spin_unlock_irq
+   0.09%           ld-linux-x86-64.so.2  __tls_get_addr
+   0.08%                      libjvm.so  fileStream::write
+   0.06%              [kernel.kallsyms]  __rcu_read_lock
+   2.89%  <...other 126 warm regions...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+  44.85%                      libm.so.6  [unknown]
+  28.39%               Unknown, level 0  methods.JNIPowerCalculator::calculate, version 1, compile id 1220
+   8.31%                      libm.so.6  pow
+   6.09%  libnative-power-calculator.so  Java_methods_JNIPowerCalculator_calculate
+   3.04%                    c2, level 4  jmh.jmh_generated.NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest::benchmark_JNI_Power_Calculator_avgt_jmhStub, version 6, compile id 1261
+   1.95%              [kernel.kallsyms]  syscall_enter_from_user_mode
+   1.32%                      libc.so.6  write
+   1.30%                      libc.so.6  syscall
+   0.77%                      libm.so.6  @plt
+   0.49%                                 <unknown>
+   0.39%                      libjvm.so  ElfSymbolTable::lookup
+   0.15%              [kernel.kallsyms]  _raw_spin_unlock_irqrestore
+   0.11%              [kernel.kallsyms]  mutex_lock
+   0.11%              [kernel.kallsyms]  mutex_unlock
+   0.09%           ld-linux-x86-64.so.2  __tls_get_addr
+   0.09%              [kernel.kallsyms]  vfs_write
+   0.09%              [kernel.kallsyms]  _raw_spin_unlock_irq
+   0.09%              [kernel.kallsyms]  pipe_write
+   0.08%                      libjvm.so  fileStream::write
+   0.08%              [kernel.kallsyms]  __fget_light
+   2.20%  <...other 96 warm methods...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Distribution by Source]........................................................................
+  53.93%                      libm.so.6
+  28.39%               Unknown, level 0
+   6.09%  libnative-power-calculator.so
+   3.68%              [kernel.kallsyms]
+   3.06%                    c2, level 4
+   2.84%                      libc.so.6
+   1.15%                      libjvm.so
+   0.49%
+   0.13%                 hsdis-amd64.so
+   0.11%                    interpreter
+   0.09%           ld-linux-x86-64.so.2
+   0.04%                  perf-8147.map
+....................................................................................................
+ 100.00%  <totals>
+
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.1, OpenJDK 64-Bit Server VM, 25.0.1+8-LTS
+# VM invoker: /root/.sdkman/candidates/java/25.0.1-tem/bin/java
+# VM options: -Djava.library.path=./lib --enable-native-access=ALL-UNNAMED -Dscala.sources=/root/native-method-call-playground/native/PowerCalculator.c:/root/native-method-call-playground/native/methods_JNIPowerCalculator.h:/root/native-method-call-playground/project.scala:/root/native-method-call-playground/src/main/java/jmh/NativeMethodCallBenchmark.java:/root/native-method-call-playground/src/main/java/math/NativeMath$shared.java:/root/native-method-call-playground/src/main/java/math/NativeMath.java:/root/native-method-call-playground/src/main/java/methods/JNIPowerCalculator.java:/root/native-method-call-playground/src/main/java/methods/PanamaJExtractPowerCalculator.java:/root/native-method-call-playground/src/main/java/methods/PanamaPowerCalculator.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B1.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B2.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B3.java -Dscala.source.names=PowerCalculator.c:methods_JNIPowerCalculator.h:project.scala:NativeMethodCallBenchmark.java:NativeMath$shared.java:NativeMath.java:JNIPowerCalculator.java:PanamaJExtractPowerCalculator.java:PanamaPowerCalculator.java:NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_jmhType.java:NativeMethodCallBenchmark_jmhType_B1.java:NativeMethodCallBenchmark_jmhType_B2.java:NativeMethodCallBenchmark_jmhType_B3.java
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.NativeMethodCallBenchmark.benchmark_Panama_Invoke_Exact_Power_Calculator
+
+# Run progress: 20.00% complete, ETA 00:01:29
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfAsmProfiler
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 1908848312.000 ns/op
+# Warmup Iteration   2: 41.124 ns/op
+# Warmup Iteration   3: 31.446 ns/op
+# Warmup Iteration   4: 29.577 ns/op
+# Warmup Iteration   5: 29.500 ns/op
+Iteration   1: 29.647 ns/op
+Iteration   2: 29.400 ns/op
+Iteration   3: 29.440 ns/op
+Iteration   4: 29.563 ns/op
+Iteration   5: 33.630 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler
+
+
+Result "jmh.NativeMethodCallBenchmark.benchmark_Panama_Invoke_Exact_Power_Calculator":
+  30.336 ?(99.9%) 7.101 ns/op [Average]
+  (min, avg, max) = (29.400, 30.336, 33.630), stdev = 1.844
+  CI (99.9%): [23.235, 37.437] (assumes normal distribution)
+
+Secondary result "jmh.NativeMethodCallBenchmark.benchmark_Panama_Invoke_Exact_Power_Calculator:asm":
+PrintAssembly processed: 263551 total address lines.
+Perf output processed (skipped 14.822 seconds):
+ Column 1: cpu-clock (5319 events)
+
+Hottest code regions (>10.00% "cpu-clock" events):
+ Event counts are percents of total event count.
+
+....[Hottest Region 1]..............................................................................
+libm.so.6, [unknown]
+
+ <no assembly is recorded, native region>
+....................................................................................................
+  45.63%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+, <unknown>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 0x00007f2dcf95deab:   ret
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               --------------------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <blob name='nep_invoker_blob' total_size='496'>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <sect index='1' capacity='496' size='243' remaining='253'/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               </blob>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               - - - [BEGIN] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Decoding RuntimeStub - nep_invoker_blob 0x00007f2dcfa60188 [0x00007f2dcfa601e0, 0x00007f2dcfa602d8] (248 bytes)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               --------------------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 0x00007f2dcfa601e0:   push   rbp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 0x00007f2dcfa601e1:   mov    rbp,rsp
+   1.03%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         0x00007f2dcfa601e4:   sub    rsp,0x10
+   0.02%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ?    0x00007f2dcfa601e8:   vzeroupper
+   1.30%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ?    0x00007f2dcfa601eb:   mov    QWORD PTR [r15+0x490],rbp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ?    0x00007f2dcfa601f2:   movabs r10,0x7f2dcfa601e8
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 0x00007f2dcfa601fc:   mov    QWORD PTR [r15+0x488],r10
+   1.24%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         0x00007f2dcfa60203:   mov    QWORD PTR [r15+0x480],rsp
+   0.02%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         0x00007f2dcfa6020a:   mov    DWORD PTR [r15+0x52c],0x4
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 0x00007f2dcfa60215:   mov    r10,rsi
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 0x00007f2dcfa60218:   call   r10
+   0.19%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         0x00007f2dcfa6021b:   vzeroupper
+   1.03%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         0x00007f2dcfa6021e:   mov    DWORD PTR [r15+0x52c],0x5
+   1.15%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         0x00007f2dcfa60229:   lock add DWORD PTR [rsp-0x40],0x0
+  19.82%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         0x00007f2dcfa6022f:   cmp    rbp,QWORD PTR [r15+0x28]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ?   0x00007f2dcfa60233:   ja     0x00007f2dcfa60286
+   0.21%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ?   0x00007f2dcfa60239:   cmp    DWORD PTR [r15+0x528],0x0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ??  0x00007f2dcfa60241:   jne    0x00007f2dcfa60286
+   1.20%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ??  0x00007f2dcfa60247:   mov    DWORD PTR [r15+0x52c],0x8
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ??  0x00007f2dcfa60252:   cmp    DWORD PTR [r15+0x5a8],0x2
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ??  0x00007f2dcfa6025a:   je     0x00007f2dcfa602ae
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ??  0x00007f2dcfa60260:   mov    QWORD PTR [r15+0x480],0x0
+   1.07%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ??  0x00007f2dcfa6026b:   mov    QWORD PTR [r15+0x490],0x0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ??  0x00007f2dcfa60276:   mov    QWORD PTR [r15+0x488],0x0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ??  0x00007f2dcfa60281:   vzeroupper
+   1.17%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ??  0x00007f2dcfa60284:   leave
+   1.17%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ??  0x00007f2dcfa60285:   ret
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ??  0x00007f2dcfa60286:   vmovdqu XMMWORD PTR [rsp],xmm0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 0x00007f2dcfa6028b:   mov    rdi,r15
+....................................................................................................
+  27.20%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+  45.63%           libm.so.6  [unknown]
+  27.20%                      <unknown>
+   9.16%           libm.so.6  pow
+   4.15%         c2, level 4  jmh.jmh_generated.NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest::benchmark_Panama_Invoke_Exact_Power_Calculator_avgt_jmhStub, version 5, compile id 1608
+   3.40%                      <unknown>
+   1.60%   [kernel.kallsyms]  syscall_enter_from_user_mode
+   1.13%           libc.so.6  write
+   1.05%           libc.so.6  syscall
+   1.02%    Unknown, level 0  java.lang.invoke.MethodHandle::linkToNative, version 1, compile id 1448
+   0.88%           libm.so.6  @plt
+   0.47%           libjvm.so  ElfSymbolTable::lookup
+   0.17%   [kernel.kallsyms]  mutex_lock
+   0.13%   [kernel.kallsyms]  _raw_spin_unlock_irqrestore
+   0.13%           libjvm.so  RelocIterator::initialize
+   0.11%   [kernel.kallsyms]  apparmor_file_permission
+   0.08%   [kernel.kallsyms]  __fget_light
+   0.08%   [kernel.kallsyms]  mutex_unlock
+   0.08%   [kernel.kallsyms]  _raw_spin_unlock_irq
+   0.08%           libjvm.so  decode_env::print_hook_comments
+   0.08%           libjvm.so  xmlStream::write_text
+   3.33%  <...other 144 warm regions...>
+....................................................................................................
+  99.94%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+  45.63%           libm.so.6  [unknown]
+  31.17%                      <unknown>
+   9.16%           libm.so.6  pow
+   4.15%         c2, level 4  jmh.jmh_generated.NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest::benchmark_Panama_Invoke_Exact_Power_Calculator_avgt_jmhStub, version 5, compile id 1608
+   1.60%   [kernel.kallsyms]  syscall_enter_from_user_mode
+   1.13%           libc.so.6  write
+   1.05%           libc.so.6  syscall
+   1.02%    Unknown, level 0  java.lang.invoke.MethodHandle::linkToNative, version 1, compile id 1448
+   0.88%           libm.so.6  @plt
+   0.47%           libjvm.so  ElfSymbolTable::lookup
+   0.17%   [kernel.kallsyms]  mutex_lock
+   0.13%   [kernel.kallsyms]  _raw_spin_unlock_irqrestore
+   0.13%           libjvm.so  RelocIterator::initialize
+   0.13%   [kernel.kallsyms]  __fget_light
+   0.11%   [kernel.kallsyms]  apparmor_file_permission
+   0.11%           libc.so.6  [unknown]
+   0.09%           libjvm.so  defaultStream::write
+   0.09%   [kernel.kallsyms]  pipe_write
+   0.08%   [kernel.kallsyms]  mutex_unlock
+   0.08%   [kernel.kallsyms]  vfs_write
+   2.56%  <...other 103 warm methods...>
+....................................................................................................
+  99.94%  <totals>
+
+....[Distribution by Source]........................................................................
+  55.67%           libm.so.6
+  31.17%
+   4.15%         c2, level 4
+   3.57%   [kernel.kallsyms]
+   2.54%           libc.so.6
+   1.50%           libjvm.so
+   1.02%    Unknown, level 0
+   0.15%         interpreter
+   0.11%      hsdis-amd64.so
+   0.06%         c1, level 3
+....................................................................................................
+  99.94%  <totals>
+
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.1, OpenJDK 64-Bit Server VM, 25.0.1+8-LTS
+# VM invoker: /root/.sdkman/candidates/java/25.0.1-tem/bin/java
+# VM options: -Djava.library.path=./lib --enable-native-access=ALL-UNNAMED -Dscala.sources=/root/native-method-call-playground/native/PowerCalculator.c:/root/native-method-call-playground/native/methods_JNIPowerCalculator.h:/root/native-method-call-playground/project.scala:/root/native-method-call-playground/src/main/java/jmh/NativeMethodCallBenchmark.java:/root/native-method-call-playground/src/main/java/math/NativeMath$shared.java:/root/native-method-call-playground/src/main/java/math/NativeMath.java:/root/native-method-call-playground/src/main/java/methods/JNIPowerCalculator.java:/root/native-method-call-playground/src/main/java/methods/PanamaJExtractPowerCalculator.java:/root/native-method-call-playground/src/main/java/methods/PanamaPowerCalculator.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B1.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B2.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B3.java -Dscala.source.names=PowerCalculator.c:methods_JNIPowerCalculator.h:project.scala:NativeMethodCallBenchmark.java:NativeMath$shared.java:NativeMath.java:JNIPowerCalculator.java:PanamaJExtractPowerCalculator.java:PanamaPowerCalculator.java:NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_jmhType.java:NativeMethodCallBenchmark_jmhType_B1.java:NativeMethodCallBenchmark_jmhType_B2.java:NativeMethodCallBenchmark_jmhType_B3.java
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.NativeMethodCallBenchmark.benchmark_Panama_Invoke_With_Conversion_Power_Calculator
+
+# Run progress: 40.00% complete, ETA 00:01:08
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfAsmProfiler
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 1888462322.000 ns/op
+# Warmup Iteration   2: 52.294 ns/op
+# Warmup Iteration   3: 34.312 ns/op
+# Warmup Iteration   4: 39.099 ns/op
+# Warmup Iteration   5: 49.582 ns/op
+Iteration   1: 40.937 ns/op
+Iteration   2: 34.149 ns/op
+Iteration   3: 34.661 ns/op
+Iteration   4: 34.439 ns/op
+Iteration   5: 39.847 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler
+
+
+Result "jmh.NativeMethodCallBenchmark.benchmark_Panama_Invoke_With_Conversion_Power_Calculator":
+  36.807 ?(99.9%) 12.709 ns/op [Average]
+  (min, avg, max) = (34.149, 36.807, 40.937), stdev = 3.300
+  CI (99.9%): [24.098, 49.515] (assumes normal distribution)
+
+Secondary result "jmh.NativeMethodCallBenchmark.benchmark_Panama_Invoke_With_Conversion_Power_Calculator:asm":
+PrintAssembly processed: 265228 total address lines.
+Perf output processed (skipped 14.975 seconds):
+ Column 1: cpu-clock (5327 events)
+
+Hottest code regions (>10.00% "cpu-clock" events):
+ Event counts are percents of total event count.
+
+....[Hottest Region 1]..............................................................................
+libm.so.6, [unknown]
+
+ <no assembly is recorded, native region>
+....................................................................................................
+  39.91%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+, <unknown>
+
+             --------------------------------------------------------------------------------
+             [/Disassembly]
+             </print_nmethod>
+             - - - [BEGIN] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+             Decoding RuntimeStub - nep_invoker_blob 0x00007fa203a99188 [0x00007fa203a991e0, 0x00007fa203a992d8] (248 bytes)
+             --------------------------------------------------------------------------------
+   1.18%       0x00007fa203a991e0:   push   rbp
+   0.04%       0x00007fa203a991e1:   mov    rbp,rsp
+               0x00007fa203a991e4:   sub    rsp,0x10
+   1.09%  ?    0x00007fa203a991e8:   vzeroupper
+   1.16%  ?    0x00007fa203a991eb:   mov    QWORD PTR [r15+0x490],rbp
+          ?    0x00007fa203a991f2:   movabs r10,0x7fa203a991e8
+               0x00007fa203a991fc:   mov    QWORD PTR [r15+0x488],r10
+               0x00007fa203a99203:   mov    QWORD PTR [r15+0x480],rsp
+   1.20%       0x00007fa203a9920a:   mov    DWORD PTR [r15+0x52c],0x4
+               0x00007fa203a99215:   mov    r10,rsi
+               0x00007fa203a99218:   call   r10
+   0.09%       0x00007fa203a9921b:   vzeroupper
+   1.05%       0x00007fa203a9921e:   mov    DWORD PTR [r15+0x52c],0x5
+   0.86%       0x00007fa203a99229:   lock add DWORD PTR [rsp-0x40],0x0
+  17.70%       0x00007fa203a9922f:   cmp    rbp,QWORD PTR [r15+0x28]
+           ?   0x00007fa203a99233:   ja     0x00007fa203a99286
+   0.15%   ?   0x00007fa203a99239:   cmp    DWORD PTR [r15+0x528],0x0
+           ??  0x00007fa203a99241:   jne    0x00007fa203a99286
+   1.11%   ??  0x00007fa203a99247:   mov    DWORD PTR [r15+0x52c],0x8
+           ??  0x00007fa203a99252:   cmp    DWORD PTR [r15+0x5a8],0x2
+           ??  0x00007fa203a9925a:   je     0x00007fa203a992ae
+           ??  0x00007fa203a99260:   mov    QWORD PTR [r15+0x480],0x0
+   0.98%   ??  0x00007fa203a9926b:   mov    QWORD PTR [r15+0x490],0x0
+           ??  0x00007fa203a99276:   mov    QWORD PTR [r15+0x488],0x0
+           ??  0x00007fa203a99281:   vzeroupper
+   1.20%   ??  0x00007fa203a99284:   leave
+   0.90%   ??  0x00007fa203a99285:   ret
+           ??  0x00007fa203a99286:   vmovdqu XMMWORD PTR [rsp],xmm0
+               0x00007fa203a9928b:   mov    rdi,r15
+....................................................................................................
+  25.64%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+  39.91%           libm.so.6  [unknown]
+  25.64%                      <unknown>
+   8.09%           libm.so.6  pow
+   6.66%         c2, level 4  java.lang.invoke.LambdaForm$MH.0x000000006c088400::invoke, version 2, compile id 1600
+   5.74%         c2, level 4  jmh.jmh_generated.NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest::benchmark_Panama_Invoke_With_Conversion_Power_Calculator_avgt_jmhStub, version 6, compile id 1612
+   3.08%                      <unknown>
+   2.06%    Unknown, level 0  java.lang.invoke.MethodHandle::invokeBasic, version 1, compile id 1496
+   1.73%   [kernel.kallsyms]  syscall_enter_from_user_mode
+   1.15%           libc.so.6  write
+   1.09%           libc.so.6  syscall
+   0.47%           libjvm.so  ElfSymbolTable::lookup
+   0.23%   [kernel.kallsyms]  _raw_spin_unlock_irqrestore
+   0.13%   [kernel.kallsyms]  mutex_lock
+   0.09%   [kernel.kallsyms]  __fget_light
+   0.08%   [kernel.kallsyms]  __fget_light
+   0.08%   [kernel.kallsyms]  copy_user_enhanced_fast_string
+   0.08%   [kernel.kallsyms]  mutex_unlock
+   0.08%           libjvm.so  fileStream::write
+   0.06%   [kernel.kallsyms]  __task_pid_nr_ns
+   0.06%   [kernel.kallsyms]  apparmor_file_permission
+   3.49%  <...other 157 warm regions...>
+....................................................................................................
+  99.98%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+  39.91%           libm.so.6  [unknown]
+  29.30%                      <unknown>
+   8.09%           libm.so.6  pow
+   6.66%         c2, level 4  java.lang.invoke.LambdaForm$MH.0x000000006c088400::invoke, version 2, compile id 1600
+   5.74%         c2, level 4  jmh.jmh_generated.NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest::benchmark_Panama_Invoke_With_Conversion_Power_Calculator_avgt_jmhStub, version 6, compile id 1612
+   2.06%    Unknown, level 0  java.lang.invoke.MethodHandle::invokeBasic, version 1, compile id 1496
+   1.73%   [kernel.kallsyms]  syscall_enter_from_user_mode
+   1.15%           libc.so.6  write
+   1.09%           libc.so.6  syscall
+   0.47%           libjvm.so  ElfSymbolTable::lookup
+   0.23%   [kernel.kallsyms]  _raw_spin_unlock_irqrestore
+   0.17%   [kernel.kallsyms]  __fget_light
+   0.13%   [kernel.kallsyms]  mutex_lock
+   0.13%      hsdis-amd64.so  print_insn
+   0.09%           libjvm.so  defaultStream::write
+   0.09%   [kernel.kallsyms]  vfs_write
+   0.08%   [kernel.kallsyms]  copy_user_enhanced_fast_string
+   0.08%   [kernel.kallsyms]  mutex_unlock
+   0.08%   [kernel.kallsyms]  apparmor_file_permission
+   0.08%           libjvm.so  fileStream::write
+   2.63%  <...other 111 warm methods...>
+....................................................................................................
+  99.98%  <totals>
+
+....[Distribution by Source]........................................................................
+  48.06%           libm.so.6
+  29.30%
+  12.41%         c2, level 4
+   3.77%   [kernel.kallsyms]
+   2.42%           libc.so.6
+   2.06%    Unknown, level 0
+   1.63%           libjvm.so
+   0.15%      hsdis-amd64.so
+   0.15%         interpreter
+   0.02%         c1, level 1
+....................................................................................................
+  99.98%  <totals>
+
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.1, OpenJDK 64-Bit Server VM, 25.0.1+8-LTS
+# VM invoker: /root/.sdkman/candidates/java/25.0.1-tem/bin/java
+# VM options: -Djava.library.path=./lib --enable-native-access=ALL-UNNAMED -Dscala.sources=/root/native-method-call-playground/native/PowerCalculator.c:/root/native-method-call-playground/native/methods_JNIPowerCalculator.h:/root/native-method-call-playground/project.scala:/root/native-method-call-playground/src/main/java/jmh/NativeMethodCallBenchmark.java:/root/native-method-call-playground/src/main/java/math/NativeMath$shared.java:/root/native-method-call-playground/src/main/java/math/NativeMath.java:/root/native-method-call-playground/src/main/java/methods/JNIPowerCalculator.java:/root/native-method-call-playground/src/main/java/methods/PanamaJExtractPowerCalculator.java:/root/native-method-call-playground/src/main/java/methods/PanamaPowerCalculator.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B1.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B2.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B3.java -Dscala.source.names=PowerCalculator.c:methods_JNIPowerCalculator.h:project.scala:NativeMethodCallBenchmark.java:NativeMath$shared.java:NativeMath.java:JNIPowerCalculator.java:PanamaJExtractPowerCalculator.java:PanamaPowerCalculator.java:NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_jmhType.java:NativeMethodCallBenchmark_jmhType_B1.java:NativeMethodCallBenchmark_jmhType_B2.java:NativeMethodCallBenchmark_jmhType_B3.java
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.NativeMethodCallBenchmark.benchmark_Panama_Invoke_Without_Conversion_Power_Calculator
+
+# Run progress: 60.00% complete, ETA 00:00:45
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfAsmProfiler
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 1890628804.000 ns/op
+# Warmup Iteration   2: 40.688 ns/op
+# Warmup Iteration   3: 31.627 ns/op
+# Warmup Iteration   4: 29.550 ns/op
+# Warmup Iteration   5: 29.528 ns/op
+Iteration   1: 29.680 ns/op
+Iteration   2: 29.562 ns/op
+Iteration   3: 29.796 ns/op
+Iteration   4: 29.642 ns/op
+Iteration   5: 29.622 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler
+
+
+Result "jmh.NativeMethodCallBenchmark.benchmark_Panama_Invoke_Without_Conversion_Power_Calculator":
+  29.660 ?(99.9%) 0.335 ns/op [Average]
+  (min, avg, max) = (29.562, 29.660, 29.796), stdev = 0.087
+  CI (99.9%): [29.325, 29.995] (assumes normal distribution)
+
+Secondary result "jmh.NativeMethodCallBenchmark.benchmark_Panama_Invoke_Without_Conversion_Power_Calculator:asm":
+PrintAssembly processed: 257638 total address lines.
+Perf output processed (skipped 14.711 seconds):
+ Column 1: cpu-clock (5356 events)
+
+Hottest code regions (>10.00% "cpu-clock" events):
+ Event counts are percents of total event count.
+
+....[Hottest Region 1]..............................................................................
+libm.so.6, [unknown]
+
+ <no assembly is recorded, native region>
+....................................................................................................
+  43.95%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+, <unknown>
+
+             [/Disassembly]
+             </print_nmethod>
+             <blob name='nep_invoker_blob' total_size='496'>
+             <sect index='1' capacity='496' size='243' remaining='253'/>
+             </blob>
+             - - - [BEGIN] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+             Decoding RuntimeStub - nep_invoker_blob 0x00007fa377a9c508 [0x00007fa377a9c560, 0x00007fa377a9c658] (248 bytes)
+             --------------------------------------------------------------------------------
+               0x00007fa377a9c560:   push   rbp
+               0x00007fa377a9c561:   mov    rbp,rsp
+   1.34%       0x00007fa377a9c564:   sub    rsp,0x10
+          ?    0x00007fa377a9c568:   vzeroupper
+   1.06%  ?    0x00007fa377a9c56b:   mov    QWORD PTR [r15+0x490],rbp
+          ?    0x00007fa377a9c572:   movabs r10,0x7fa377a9c568
+               0x00007fa377a9c57c:   mov    QWORD PTR [r15+0x488],r10
+   1.08%       0x00007fa377a9c583:   mov    QWORD PTR [r15+0x480],rsp
+               0x00007fa377a9c58a:   mov    DWORD PTR [r15+0x52c],0x4
+               0x00007fa377a9c595:   mov    r10,rsi
+               0x00007fa377a9c598:   call   r10
+   0.09%       0x00007fa377a9c59b:   vzeroupper
+   1.19%       0x00007fa377a9c59e:   mov    DWORD PTR [r15+0x52c],0x5
+   1.12%       0x00007fa377a9c5a9:   lock add DWORD PTR [rsp-0x40],0x0
+  19.79%       0x00007fa377a9c5af:   cmp    rbp,QWORD PTR [r15+0x28]
+           ?   0x00007fa377a9c5b3:   ja     0x00007fa377a9c606
+   0.04%   ?   0x00007fa377a9c5b9:   cmp    DWORD PTR [r15+0x528],0x0
+           ??  0x00007fa377a9c5c1:   jne    0x00007fa377a9c606
+   1.10%   ??  0x00007fa377a9c5c7:   mov    DWORD PTR [r15+0x52c],0x8
+           ??  0x00007fa377a9c5d2:   cmp    DWORD PTR [r15+0x5a8],0x2
+           ??  0x00007fa377a9c5da:   je     0x00007fa377a9c62e
+           ??  0x00007fa377a9c5e0:   mov    QWORD PTR [r15+0x480],0x0
+   1.14%   ??  0x00007fa377a9c5eb:   mov    QWORD PTR [r15+0x490],0x0
+           ??  0x00007fa377a9c5f6:   mov    QWORD PTR [r15+0x488],0x0
+           ??  0x00007fa377a9c601:   vzeroupper
+   1.12%   ??  0x00007fa377a9c604:   leave
+   0.99%   ??  0x00007fa377a9c605:   ret
+           ??  0x00007fa377a9c606:   vmovdqu XMMWORD PTR [rsp],xmm0
+               0x00007fa377a9c60b:   mov    rdi,r15
+....................................................................................................
+  26.83%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+  43.95%             libm.so.6  [unknown]
+  26.83%                        <unknown>
+   9.04%             libm.so.6  pow
+   4.93%           c2, level 4  jmh.jmh_generated.NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest::benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_avgt_jmhStub, version 5, compile id 1634
+   3.25%                        <unknown>
+   1.55%             libc.so.6  write
+   1.53%     [kernel.kallsyms]  syscall_enter_from_user_mode
+   1.53%      Unknown, level 0  java.lang.invoke.MethodHandle::linkToNative, version 1, compile id 1475
+   1.34%             libm.so.6  @plt
+   1.12%             libc.so.6  syscall
+   0.43%             libjvm.so  ElfSymbolTable::lookup
+   0.34%     [kernel.kallsyms]  _raw_spin_unlock_irqrestore
+   0.13%             libjvm.so  fileStream::write
+   0.13%             libjvm.so  RelocIterator::initialize
+   0.11%     [kernel.kallsyms]  __task_pid_nr_ns
+   0.07%  ld-linux-x86-64.so.2  __tls_get_addr
+   0.06%     [kernel.kallsyms]  pipe_write
+   0.06%     [kernel.kallsyms]  pipe_write
+   0.06%     [kernel.kallsyms]  __fget_light
+   0.06%     [kernel.kallsyms]  ext4_fill_raw_inode
+   3.49%  <...other 158 warm regions...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+  43.95%             libm.so.6  [unknown]
+  30.66%                        <unknown>
+   9.04%             libm.so.6  pow
+   4.93%           c2, level 4  jmh.jmh_generated.NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest::benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_avgt_jmhStub, version 5, compile id 1634
+   1.55%             libc.so.6  write
+   1.53%      Unknown, level 0  java.lang.invoke.MethodHandle::linkToNative, version 1, compile id 1475
+   1.53%     [kernel.kallsyms]  syscall_enter_from_user_mode
+   1.34%             libm.so.6  @plt
+   1.12%             libc.so.6  syscall
+   0.43%             libjvm.so  ElfSymbolTable::lookup
+   0.34%     [kernel.kallsyms]  _raw_spin_unlock_irqrestore
+   0.17%     [kernel.kallsyms]  pipe_write
+   0.15%     [kernel.kallsyms]  __task_pid_nr_ns
+   0.15%             libjvm.so  fileStream::write
+   0.13%        hsdis-amd64.so  print_insn
+   0.13%             libjvm.so  RelocIterator::initialize
+   0.09%     [kernel.kallsyms]  vfs_write
+   0.07%             libc.so.6  _IO_fflush
+   0.07%  ld-linux-x86-64.so.2  __tls_get_addr
+   0.07%     [kernel.kallsyms]  ext4_fill_raw_inode
+   2.54%  <...other 111 warm methods...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Distribution by Source]........................................................................
+  54.33%             libm.so.6
+  30.66%
+   4.93%           c2, level 4
+   3.57%     [kernel.kallsyms]
+   2.93%             libc.so.6
+   1.64%             libjvm.so
+   1.53%      Unknown, level 0
+   0.21%        hsdis-amd64.so
+   0.11%           interpreter
+   0.07%  ld-linux-x86-64.so.2
+   0.02%             libzip.so
+....................................................................................................
+ 100.00%  <totals>
+
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.1, OpenJDK 64-Bit Server VM, 25.0.1+8-LTS
+# VM invoker: /root/.sdkman/candidates/java/25.0.1-tem/bin/java
+# VM options: -Djava.library.path=./lib --enable-native-access=ALL-UNNAMED -Dscala.sources=/root/native-method-call-playground/native/PowerCalculator.c:/root/native-method-call-playground/native/methods_JNIPowerCalculator.h:/root/native-method-call-playground/project.scala:/root/native-method-call-playground/src/main/java/jmh/NativeMethodCallBenchmark.java:/root/native-method-call-playground/src/main/java/math/NativeMath$shared.java:/root/native-method-call-playground/src/main/java/math/NativeMath.java:/root/native-method-call-playground/src/main/java/methods/JNIPowerCalculator.java:/root/native-method-call-playground/src/main/java/methods/PanamaJExtractPowerCalculator.java:/root/native-method-call-playground/src/main/java/methods/PanamaPowerCalculator.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B1.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B2.java:/root/native-method-call-playground/.scala-build/native-method-call-playground_864c65bfb2_jmh/sources/jmh/jmh_generated/NativeMethodCallBenchmark_jmhType_B3.java -Dscala.source.names=PowerCalculator.c:methods_JNIPowerCalculator.h:project.scala:NativeMethodCallBenchmark.java:NativeMath$shared.java:NativeMath.java:JNIPowerCalculator.java:PanamaJExtractPowerCalculator.java:PanamaPowerCalculator.java:NativeMethodCallBenchmark_benchmark_JNI_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_Exact_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_With_Conversion_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_Invoke_Without_Conversion_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest.java:NativeMethodCallBenchmark_jmhType.java:NativeMethodCallBenchmark_jmhType_B1.java:NativeMethodCallBenchmark_jmhType_B2.java:NativeMethodCallBenchmark_jmhType_B3.java
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: jmh.NativeMethodCallBenchmark.benchmark_Panama_J_Extract_Power_Calculator
+
+# Run progress: 80.00% complete, ETA 00:00:22
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfAsmProfiler
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 1763174486.000 ns/op
+# Warmup Iteration   2: 39.897 ns/op
+# Warmup Iteration   3: 29.562 ns/op
+# Warmup Iteration   4: 31.486 ns/op
+# Warmup Iteration   5: 29.449 ns/op
+Iteration   1: 29.370 ns/op
+Iteration   2: 29.500 ns/op
+Iteration   3: 29.481 ns/op
+Iteration   4: 29.436 ns/op
+Iteration   5: 33.055 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler
+
+
+Result "jmh.NativeMethodCallBenchmark.benchmark_Panama_J_Extract_Power_Calculator":
+  30.168 ?(99.9%) 6.217 ns/op [Average]
+  (min, avg, max) = (29.370, 30.168, 33.055), stdev = 1.614
+  CI (99.9%): [23.952, 36.385] (assumes normal distribution)
+
+Secondary result "jmh.NativeMethodCallBenchmark.benchmark_Panama_J_Extract_Power_Calculator:asm":
+PrintAssembly processed: 269267 total address lines.
+Perf output processed (skipped 14.537 seconds):
+ Column 1: cpu-clock (5375 events)
+
+Hottest code regions (>10.00% "cpu-clock" events):
+ Event counts are percents of total event count.
+
+....[Hottest Region 1]..............................................................................
+libm.so.6, [unknown]
+
+ <no assembly is recorded, native region>
+....................................................................................................
+  44.63%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+, <unknown>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                0x00007fc5a795deab:   ret
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              --------------------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <blob name='nep_invoker_blob' total_size='496'>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <sect index='1' capacity='496' size='243' remaining='253'/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </blob>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              - - - [BEGIN] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Decoding RuntimeStub - nep_invoker_blob 0x00007fc5a7a91888 [0x00007fc5a7a918e0, 0x00007fc5a7a919d8] (248 bytes)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              --------------------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                0x00007fc5a7a918e0:   push   rbp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                0x00007fc5a7a918e1:   mov    rbp,rsp
+   1.19%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0x00007fc5a7a918e4:   sub    rsp,0x10
+   0.02%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ?    0x00007fc5a7a918e8:   vzeroupper
+   1.27%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ?    0x00007fc5a7a918eb:   mov    QWORD PTR [r15+0x490],rbp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ?    0x00007fc5a7a918f2:   movabs r10,0x7fc5a7a918e8
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                0x00007fc5a7a918fc:   mov    QWORD PTR [r15+0x488],r10
+   1.10%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0x00007fc5a7a91903:   mov    QWORD PTR [r15+0x480],rsp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                0x00007fc5a7a9190a:   mov    DWORD PTR [r15+0x52c],0x4
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                0x00007fc5a7a91915:   mov    r10,rsi
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                0x00007fc5a7a91918:   call   r10
+   0.13%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0x00007fc5a7a9191b:   vzeroupper
+   1.30%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0x00007fc5a7a9191e:   mov    DWORD PTR [r15+0x52c],0x5
+   0.93%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0x00007fc5a7a91929:   lock add DWORD PTR [rsp-0x40],0x0
+  19.16%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0x00007fc5a7a9192f:   cmp    rbp,QWORD PTR [r15+0x28]
+   0.02%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ?   0x00007fc5a7a91933:   ja     0x00007fc5a7a91986
+   0.07%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ?   0x00007fc5a7a91939:   cmp    DWORD PTR [r15+0x528],0x0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ??  0x00007fc5a7a91941:   jne    0x00007fc5a7a91986
+   1.27%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ??  0x00007fc5a7a91947:   mov    DWORD PTR [r15+0x52c],0x8
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ??  0x00007fc5a7a91952:   cmp    DWORD PTR [r15+0x5a8],0x2
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ??  0x00007fc5a7a9195a:   je     0x00007fc5a7a919ae
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ??  0x00007fc5a7a91960:   mov    QWORD PTR [r15+0x480],0x0
+   0.87%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ??  0x00007fc5a7a9196b:   mov    QWORD PTR [r15+0x490],0x0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ??  0x00007fc5a7a91976:   mov    QWORD PTR [r15+0x488],0x0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ??  0x00007fc5a7a91981:   vzeroupper
+   1.27%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ??  0x00007fc5a7a91984:   leave
+   1.19%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ??  0x00007fc5a7a91985:   ret
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ??  0x00007fc5a7a91986:   vmovdqu XMMWORD PTR [rsp],xmm0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                0x00007fc5a7a9198b:   mov    rdi,r15
+....................................................................................................
+  26.46%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+  44.63%             libm.so.6  [unknown]
+  26.46%                        <unknown>
+   9.64%             libm.so.6  pow
+   4.35%           c2, level 4  jmh.jmh_generated.NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest::benchmark_Panama_J_Extract_Power_Calculator_avgt_jmhStub, version 6, compile id 1635
+   3.33%                        <unknown>
+   2.44%     [kernel.kallsyms]  syscall_enter_from_user_mode
+   1.43%             libc.so.6  syscall
+   1.13%             libm.so.6  @plt
+   1.08%             libc.so.6  write
+   0.99%      Unknown, level 0  java.lang.invoke.MethodHandle::linkToNative, version 1, compile id 1467
+   0.20%     [kernel.kallsyms]  mutex_lock
+   0.19%     [kernel.kallsyms]  _raw_spin_unlock_irqrestore
+   0.19%             libjvm.so  ElfSymbolTable::lookup
+   0.13%             libjvm.so  ElfSymbolTable::lookup
+   0.11%     [kernel.kallsyms]  _raw_spin_unlock_irq
+   0.09%     [kernel.kallsyms]  copy_user_short_string
+   0.09%             libjvm.so  RelocIterator::initialize
+   0.09%             libc.so.6  _IO_fwrite
+   0.09%  ld-linux-x86-64.so.2  __tls_get_addr
+   0.07%     [kernel.kallsyms]  apparmor_file_permission
+   3.26%  <...other 147 warm regions...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+  44.63%             libm.so.6  [unknown]
+  30.33%                        <unknown>
+   9.64%             libm.so.6  pow
+   4.35%           c2, level 4  jmh.jmh_generated.NativeMethodCallBenchmark_benchmark_Panama_J_Extract_Power_Calculator_jmhTest::benchmark_Panama_J_Extract_Power_Calculator_avgt_jmhStub, version 6, compile id 1635
+   2.44%     [kernel.kallsyms]  syscall_enter_from_user_mode
+   1.43%             libc.so.6  syscall
+   1.13%             libm.so.6  @plt
+   1.08%             libc.so.6  write
+   0.99%      Unknown, level 0  java.lang.invoke.MethodHandle::linkToNative, version 1, compile id 1467
+   0.32%             libjvm.so  ElfSymbolTable::lookup
+   0.20%     [kernel.kallsyms]  mutex_lock
+   0.20%             libc.so.6  _IO_fwrite
+   0.19%     [kernel.kallsyms]  _raw_spin_unlock_irqrestore
+   0.11%        hsdis-amd64.so  print_insn
+   0.11%     [kernel.kallsyms]  _raw_spin_unlock_irq
+   0.09%             libjvm.so  RelocIterator::initialize
+   0.09%  ld-linux-x86-64.so.2  __tls_get_addr
+   0.09%     [kernel.kallsyms]  copy_user_short_string
+   0.09%     [kernel.kallsyms]  pipe_write
+   0.07%     [kernel.kallsyms]  mutex_unlock
+   2.40%  <...other 102 warm methods...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Distribution by Source]........................................................................
+  55.40%             libm.so.6
+  30.33%
+   4.35%           c2, level 4
+   4.22%     [kernel.kallsyms]
+   2.96%             libc.so.6
+   1.40%             libjvm.so
+   0.99%      Unknown, level 0
+   0.15%        hsdis-amd64.so
+   0.09%  ld-linux-x86-64.so.2
+   0.06%           interpreter
+   0.04%         perf-8372.map
+   0.02%           c1, level 3
+....................................................................................................
+ 100.00%  <totals>
+
+
+
+# Run complete. Total time: 00:01:52
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                                                  Mode  Cnt   Score    Error  Units
+NativeMethodCallBenchmark.benchmark_JNI_Power_Calculator                                   avgt    5  35.050 ?  3.193  ns/op
+NativeMethodCallBenchmark.benchmark_JNI_Power_Calculator:asm                               avgt          NaN             ---
+NativeMethodCallBenchmark.benchmark_Panama_Invoke_Exact_Power_Calculator                   avgt    5  30.336 ?  7.101  ns/op
+NativeMethodCallBenchmark.benchmark_Panama_Invoke_Exact_Power_Calculator:asm               avgt          NaN             ---
+NativeMethodCallBenchmark.benchmark_Panama_Invoke_With_Conversion_Power_Calculator         avgt    5  36.807 ? 12.709  ns/op
+NativeMethodCallBenchmark.benchmark_Panama_Invoke_With_Conversion_Power_Calculator:asm     avgt          NaN             ---
+NativeMethodCallBenchmark.benchmark_Panama_Invoke_Without_Conversion_Power_Calculator      avgt    5  29.660 ?  0.335  ns/op
+NativeMethodCallBenchmark.benchmark_Panama_Invoke_Without_Conversion_Power_Calculator:asm  avgt          NaN             ---
+NativeMethodCallBenchmark.benchmark_Panama_J_Extract_Power_Calculator                      avgt    5  30.168 ?  6.217  ns/op
+NativeMethodCallBenchmark.benchmark_Panama_J_Extract_Power_Calculator:asm                  avgt          NaN             ---
