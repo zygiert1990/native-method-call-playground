@@ -26,8 +26,13 @@ public class NativeMethodCallBenchmark {
     }
 
     @Benchmark
-    public void benchmark_Panama_Invoke_Power_Calculator(Blackhole bh) {
-        bh.consume(PanamaPowerCalculator.calculateInvoke(2, 10));
+    public void benchmark_Panama_Invoke_With_Conversion_Power_Calculator(Blackhole bh) {
+        bh.consume(PanamaPowerCalculator.calculateInvokeWithConversion(2, 10));
+    }
+
+    @Benchmark
+    public void benchmark_Panama_Invoke_Without_Conversion_Power_Calculator(Blackhole bh) {
+        bh.consume(PanamaPowerCalculator.calculateInvokeWithoutConversion(2.0, 10.0));
     }
 
     @Benchmark

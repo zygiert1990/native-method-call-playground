@@ -24,7 +24,15 @@ public class PanamaPowerCalculator {
         }
     }
 
-    public static double calculateInvoke(int base, int exponent) {
+    public static double calculateInvokeWithConversion(int base, int exponent) {
+        try {
+            return (double) METHOD_HANDLE.invoke(base, exponent);
+        } catch (Throwable t) {
+            throw new RuntimeException(t);
+        }
+    }
+
+    public static double calculateInvokeWithoutConversion(double base, double exponent) {
         try {
             return (double) METHOD_HANDLE.invoke(base, exponent);
         } catch (Throwable t) {
