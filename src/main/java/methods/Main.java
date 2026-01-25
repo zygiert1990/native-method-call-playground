@@ -14,7 +14,7 @@ public class Main {
         System.out.println("Panama Invoke Without Conversion Result: " + runPanamaInvokeWithoutConversionPowerCalculator());
         System.out.println("Panama JExtract Result: " + runPanamaJExtractPowerCalculator());
         // fully optimized runs
-        System.out.println("--------------------------------------------")
+        System.out.println("--------------------------------------------");
         System.out.println("JNI Result: " + runJNIPowerCalculator());
         System.out.println("Panama Invoke Exact Result: " + runPanamaInvokeExactPowerCalculator());
         System.out.println("Panama Invoke With Conversion Result: " + runPanamaInvokeWithConversionPowerCalculator());
