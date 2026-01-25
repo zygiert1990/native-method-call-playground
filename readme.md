@@ -24,7 +24,7 @@ You can either follow all the steps manually or initialize the environment using
 5. `chmod +x scripts/init.sh`
 6. `source ./scripts/init.sh`
 
-After this you can jump to [Running benchmarks](#run-jmh-benchmark)
+After this you can jump to [Running app and benchmarks](#run-main-class)
 
 ## Manual steps
 
@@ -57,6 +57,9 @@ gcc -shared -fPIC \
 --header-class-name NativeMath \
 --include-function pow
 ```
+
+## Run Main Class
+`scala-cli . --main-class methods.Main --java-opt -XX:+PrintCompilation --power`
 
 ## Run JMH Benchmark
 `scala-cli . --jmh --power`
