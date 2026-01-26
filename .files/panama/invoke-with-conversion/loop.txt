@@ -1,0 +1,325 @@
+Disassembly for compiled method [private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 ] @0x00007fa5dfef0d88
+
+Method
+private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 of public class methods.Main @0x000000002f040000
+Compiled Code
+[Entry Point]
+[Verified Entry Point]
+0x00007fa5dfef0e80:    mov    %eax,-0x14000(%rsp)
+0x00007fa5dfef0e87:    push   %rbp
+0x00007fa5dfef0e88:    sub    $0x30,%rsp
+0x00007fa5dfef0e8c:    cmpl   $0x1,0x20(%r15)
+0x00007fa5dfef0e94:    jne    0x00007fa5dfef1136
+0x00007fa5dfef0e9a:    movabs $0x2e1ee598,%rbp
+0x00007fa5dfef0ea4:    xor    %r11d,%r11d
+0x00007fa5dfef0ea7:    vxorpd %xmm0,%xmm0,%xmm0
+0x00007fa5dfef0eab:    jmp    0x00007fa5dfef0f3a
+0x00007fa5dfef0eb0:    mov    %rax,(%rsp)
+0x00007fa5dfef0eb4:    vmovsd %xmm0,0x10(%rsp)
+0x00007fa5dfef0eba:    mov    %r11d,0x8(%rsp)
+0x00007fa5dfef0ebf:    mov    %rax,%rsi
+0x00007fa5dfef0ec2:    nop
+0x00007fa5dfef0ec3:    call   0x00007fa5df985ce0
+            private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 of public class methods.Main @0x000000002f040000 @ bci = 14, line = 45
+            locals ([0], illegal) ([1], illegal) ([2], stack[8], normal)
+            expressions ([0], int 0) ([1], stack[16], double)
+                public static double calculateInvokeWithConversion(int, int) @0x00007fa5b4401af0 of public class methods.PanamaPowerCalculator @0x000000002f040420 @ bci = 5, line = 29
+                locals ([0], illegal) ([1], illegal) ([2], illegal)
+                    static double invoke_MT(java.lang.Object, int, int, java.lang.Object) @0x00007fa5b441b6b0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04c800 @0x000000002f04c800 @ bci = 15
+                    locals ([0], illegal) ([1], stack[8], normal) ([2], int 2) ([3], illegal) ([4], stack[0], oop)
+                        static void checkCustomized(java.lang.invoke.MethodHandle) @0x000000002e46ff68 of class java.lang.invoke.Invokers @0x000000002e201b60 @ bci = 19, line = 626
+                        locals ('mh', illegal)
+
+OopMap:
+Oops:[0]
+
+
+0x00007fa5dfef0ec8:    nopl   0x140(%rax,%rax,1)
+0x00007fa5dfef0ed0:    mov    0x8(%rsp),%r11d
+0x00007fa5dfef0ed5:    vmovsd 0x10(%rsp),%xmm0
+0x00007fa5dfef0edb:    mov    (%rsp),%rax
+0x00007fa5dfef0edf:    nop
+0x00007fa5dfef0ee0:    vmovsd %xmm0,0x10(%rsp)
+0x00007fa5dfef0ee6:    mov    %r11d,0x8(%rsp)
+0x00007fa5dfef0eeb:    mov    %rax,%rsi
+0x00007fa5dfef0eee:    mov    %r11d,%edx
+0x00007fa5dfef0ef1:    mov    $0x2,%ecx
+0x00007fa5dfef0ef6:    nop
+0x00007fa5dfef0ef7:    call   0x00007fa5dfee6880
+            private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 of public class methods.Main @0x000000002f040000 @ bci = 14, line = 45
+            locals ([0], illegal) ([1], illegal) ([2], stack[8], normal)
+            expressions ([0], int 0) ([1], stack[16], double)
+                public static double calculateInvokeWithConversion(int, int) @0x00007fa5b4401af0 of public class methods.PanamaPowerCalculator @0x000000002f040420 @ bci = 5, line = 29
+                locals ([0], illegal) ([1], illegal) ([2], illegal)
+                    static double invoke_MT(java.lang.Object, int, int, java.lang.Object) @0x00007fa5b441b6b0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04c800 @0x000000002f04c800 @ bci = 22
+                    locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal)
+
+OopMap:
+
+
+0x00007fa5dfef0efc:    nopl   0x1000174(%rax,%rax,1)
+0x00007fa5dfef0f04:    vaddsd 0x10(%rsp),%xmm0,%xmm0
+0x00007fa5dfef0f0a:    vcvttsd2si %xmm0,%rax
+0x00007fa5dfef0f0f:    cmp    -0x5b8d36(%rip),%rax        # 0x00007fa5df9381e0
+0x00007fa5dfef0f16:    je     0x00007fa5dfef1122
+0x00007fa5dfef0f1c:    mov    0x8(%rsp),%r11d
+0x00007fa5dfef0f21:    inc    %r11d
+0x00007fa5dfef0f24:    cmp    $0xf4240,%r11d
+0x00007fa5dfef0f2b:    jge    0x00007fa5dfef103b
+0x00007fa5dfef0f31:    vpxor  %xmm0,%xmm0,%xmm0
+0x00007fa5dfef0f35:    vcvtsi2sd %rax,%xmm0,%xmm0
+0x00007fa5dfef0f3a:    movabs $0x715463a88,%r10
+0x00007fa5dfef0f44:    mov    0x18(%r10),%r10d
+0x00007fa5dfef0f48:    test   %r10d,%r10d
+0x00007fa5dfef0f4b:    je     0x00007fa5dfef0f80
+0x00007fa5dfef0f4d:    mov    0x10(%r12,%r10,8),%r8d
+0x00007fa5dfef0f52:    cmp    $0xe2a94db8,%r8d
+0x00007fa5dfef0f59:    jne    0x00007fa5dfef1068
+0x00007fa5dfef0f5f:    lea    (%r12,%r10,8),%rax
+0x00007fa5dfef0f63:    mov    0x14(%rax),%r8d
+0x00007fa5dfef0f67:    test   %r8d,%r8d
+0x00007fa5dfef0f6a:    je     0x00007fa5dfef104b
+0x00007fa5dfef0f70:    cmp    0x1c(%r12,%r8,8),%r12d
+0x00007fa5dfef0f75:    je     0x00007fa5dfef0eb0
+0x00007fa5dfef0f7b:    jmp    0x00007fa5dfef0ee0
+0x00007fa5dfef0f80:    movabs $0x715463a88,%r10
+0x00007fa5dfef0f8a:    mov    0x1c(%r10),%r10d
+0x00007fa5dfef0f8e:    test   %r10d,%r10d
+0x00007fa5dfef0f91:    je     0x00007fa5dfef0fe5
+0x00007fa5dfef0f93:    vmovsd %xmm0,0x10(%rsp)
+0x00007fa5dfef0f99:    mov    %r11d,0x8(%rsp)
+0x00007fa5dfef0f9e:    lea    (%r12,%r10,8),%rsi
+0x00007fa5dfef0fa2:    mov    %r11d,(%rsp)
+0x00007fa5dfef0fa6:    nop
+0x00007fa5dfef0fa7:    call   0x00007fa5df9856e0
+            private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 of public class methods.Main @0x000000002f040000 @ bci = 14, line = 45
+            locals ([0], illegal) ([1], illegal) ([2], stack[0], normal)
+            expressions ([0], int 0) ([1], stack[16], double)
+                public static double calculateInvokeWithConversion(int, int) @0x00007fa5b4401af0 of public class methods.PanamaPowerCalculator @0x000000002f040420 @ bci = 5, line = 29
+                locals ([0], illegal) ([1], illegal) ([2], illegal)
+                    static double invoke_MT(java.lang.Object, int, int, java.lang.Object) @0x00007fa5b441b6b0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04c800 @0x000000002f04c800 @ bci = 8
+                    locals ([0], illegal) ([1], stack[8], normal) ([2], int 2) ([3], illegal) ([4], illegal)
+                        static java.lang.invoke.MethodHandle checkGenericType(java.lang.invoke.MethodHandle, java.lang.invoke.MethodType) @0x000000002e470018 of class java.lang.invoke.Invokers @0x000000002e201b60 @ bci = 2, line = 541
+                        locals ('mh', illegal) ('expected', illegal)
+                            public final java.lang.invoke.MethodHandle asType(java.lang.invoke.MethodType) @0x000000002e4783e8 of public abstract class java.lang.invoke.MethodHandle @0x000000002e1ee598 @ bci = 12, line = 869
+                            locals ('this', oop 0x0000000715463a88) ('newType', oop 0x00000007154a6dc0) ([2], illegal)
+                                private java.lang.invoke.MethodHandle asTypeCached(java.lang.invoke.MethodType) @0x000000002e478390 of public abstract class java.lang.invoke.MethodHandle @0x000000002e1ee598 @ bci = 29, line = 883
+                                locals ('this', illegal) ('newType', oop 0x00000007154a6dc0) ('atc', illegal) ('softCache', illegal)
+
+OopMap:
+
+
+0x00007fa5dfef0fac:    nopl   0x2000224(%rax,%rax,1)
+0x00007fa5dfef0fb4:    mov    0x8(%rax),%r11d
+0x00007fa5dfef0fb8:    mov    $0x2e000000,%r10d
+0x00007fa5dfef0fbe:    add    %r11,%r10
+0x00007fa5dfef0fc1:    mov    0x38(%r10),%r10
+0x00007fa5dfef0fc5:    cmp    %rbp,%r10
+0x00007fa5dfef0fc8:    jne    0x00007fa5dfef10a4
+0x00007fa5dfef0fce:    mov    0x10(%rax),%r10d
+0x00007fa5dfef0fd2:    cmp    $0xe2a94db8,%r10d
+0x00007fa5dfef0fd9:    je     0x00007fa5dfef102c
+0x00007fa5dfef0fdb:    mov    (%rsp),%r11d
+0x00007fa5dfef0fdf:    vmovsd 0x10(%rsp),%xmm0
+0x00007fa5dfef0fe5:    vmovsd %xmm0,0x10(%rsp)
+0x00007fa5dfef0feb:    mov    %r11d,0x8(%rsp)
+0x00007fa5dfef0ff0:    movabs $0x715463a88,%rsi
+0x00007fa5dfef0ffa:    movabs $0x7154a6dc0,%rdx
+0x00007fa5dfef1004:    mov    %r11d,(%rsp)
+0x00007fa5dfef1008:    data16 xchg %ax,%ax
+0x00007fa5dfef100b:    call   0x00007fa5df9856e0
+            private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 of public class methods.Main @0x000000002f040000 @ bci = 14, line = 45
+            locals ([0], illegal) ([1], illegal) ([2], stack[0], normal)
+            expressions ([0], int 0) ([1], stack[16], double)
+                public static double calculateInvokeWithConversion(int, int) @0x00007fa5b4401af0 of public class methods.PanamaPowerCalculator @0x000000002f040420 @ bci = 5, line = 29
+                locals ([0], illegal) ([1], illegal) ([2], illegal)
+                    static double invoke_MT(java.lang.Object, int, int, java.lang.Object) @0x00007fa5b441b6b0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04c800 @0x000000002f04c800 @ bci = 8
+                    locals ([0], illegal) ([1], stack[8], normal) ([2], int 2) ([3], illegal) ([4], illegal)
+                        static java.lang.invoke.MethodHandle checkGenericType(java.lang.invoke.MethodHandle, java.lang.invoke.MethodType) @0x000000002e470018 of class java.lang.invoke.Invokers @0x000000002e201b60 @ bci = 2, line = 541
+                        locals ('mh', illegal) ('expected', illegal)
+                            public final java.lang.invoke.MethodHandle asType(java.lang.invoke.MethodType) @0x000000002e4783e8 of public abstract class java.lang.invoke.MethodHandle @0x000000002e1ee598 @ bci = 24, line = 873
+                            locals ('this', illegal) ('newType', illegal) ('at', illegal)
+
+OopMap:
+
+
+0x00007fa5dfef1010:    nopl   0x3000288(%rax,%rax,1)
+0x00007fa5dfef1018:    test   %rax,%rax
+0x00007fa5dfef101b:    je     0x00007fa5dfef108c
+0x00007fa5dfef101d:    mov    (%rsp),%r11d
+0x00007fa5dfef1021:    vmovsd 0x10(%rsp),%xmm0
+0x00007fa5dfef1027:    jmp    0x00007fa5dfef0f63
+0x00007fa5dfef102c:    mov    (%rsp),%r11d
+0x00007fa5dfef1030:    vmovsd 0x10(%rsp),%xmm0
+0x00007fa5dfef1036:    jmp    0x00007fa5dfef0f63
+0x00007fa5dfef103b:    add    $0x30,%rsp
+0x00007fa5dfef103f:    pop    %rbp
+0x00007fa5dfef1040:    cmp    0x28(%r15),%rsp
+0x00007fa5dfef1044:    ja     0x00007fa5dfef110c
+0x00007fa5dfef104a:    ret
+0x00007fa5dfef104b:    mov    $0xfffffff6,%esi
+0x00007fa5dfef1050:    mov    %r11d,%ebp
+0x00007fa5dfef1053:    vmovsd %xmm0,(%rsp)
+0x00007fa5dfef1058:    data16 xchg %ax,%ax
+0x00007fa5dfef105b:    call   0x00007fa5df9c31e0
+            private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 of public class methods.Main @0x000000002f040000 @ bci = 14, line = 45
+            locals ([0], illegal) ([1], illegal) ([2], rbp, int)
+            expressions ([0], int 0) ([1], stack[0], double)
+                public static double calculateInvokeWithConversion(int, int) @0x00007fa5b4401af0 of public class methods.PanamaPowerCalculator @0x000000002f040420 @ bci = 5, line = 29
+                locals ([0], illegal) ([1], illegal) ([2], illegal)
+                    static double invoke_MT(java.lang.Object, int, int, java.lang.Object) @0x00007fa5b441b6b0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04c800 @0x000000002f04c800 @ bci = 15
+                    locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal)
+                        static void checkCustomized(java.lang.invoke.MethodHandle) @0x000000002e46ff68 of class java.lang.invoke.Invokers @0x000000002e201b60 @ bci = 12, line = 625
+                        locals ('mh', illegal)
+                        expressions ([0], oop null)
+
+OopMap:
+
+
+0x00007fa5dfef1060:    nopl   0x40002d8(%rax,%rax,1)
+0x00007fa5dfef1068:    mov    $0xffffff45,%esi
+0x00007fa5dfef106d:    vmovsd %xmm0,(%rsp)
+0x00007fa5dfef1072:    mov    %r11d,0x8(%rsp)
+0x00007fa5dfef1077:    mov    %r8d,0xc(%rsp)
+0x00007fa5dfef107c:    data16 xchg %ax,%ax
+0x00007fa5dfef107f:    call   0x00007fa5df9c31e0
+            private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 of public class methods.Main @0x000000002f040000 @ bci = 14, line = 45
+            locals ([0], illegal) ([1], illegal) ([2], stack[8], normal)
+            expressions ([0], int 0) ([1], stack[0], double)
+                public static double calculateInvokeWithConversion(int, int) @0x00007fa5b4401af0 of public class methods.PanamaPowerCalculator @0x000000002f040420 @ bci = 5, line = 29
+                locals ([0], illegal) ([1], illegal) ([2], illegal)
+                    static double invoke_MT(java.lang.Object, int, int, java.lang.Object) @0x00007fa5b441b6b0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04c800 @0x000000002f04c800 @ bci = 8
+                    locals ([0], illegal) ([1], stack[8], normal) ([2], int 2) ([3], illegal) ([4], illegal)
+                        static java.lang.invoke.MethodHandle checkGenericType(java.lang.invoke.MethodHandle, java.lang.invoke.MethodType) @0x000000002e470018 of class java.lang.invoke.Invokers @0x000000002e201b60 @ bci = 2, line = 541
+                        locals ('mh', illegal) ('expected', illegal)
+                            public final java.lang.invoke.MethodHandle asType(java.lang.invoke.MethodType) @0x000000002e4783e8 of public abstract class java.lang.invoke.MethodHandle @0x000000002e1ee598 @ bci = 12, line = 869
+                            locals ('this', oop 0x0000000715463a88) ('newType', oop 0x00000007154a6dc0) ([2], illegal)
+                                private java.lang.invoke.MethodHandle asTypeCached(java.lang.invoke.MethodType) @0x000000002e478390 of public abstract class java.lang.invoke.MethodHandle @0x000000002e1ee598 @ bci = 14, line = 878
+                                locals ('this', oop 0x0000000715463a88) ('newType', oop 0x00000007154a6dc0) ('atc', illegal) ([3], illegal)
+                                expressions ([0], oop 0x00000007154a6dc0) ([1], stack[12], narrowoop)
+
+OopMap:
+NarrowOops:[12]
+
+
+0x00007fa5dfef1084:    nopl   0x50002fc(%rax,%rax,1)
+0x00007fa5dfef108c:    mov    $0xffffff56,%esi
+0x00007fa5dfef1091:    mov    (%rsp),%ebp
+0x00007fa5dfef1094:    data16 xchg %ax,%ax
+0x00007fa5dfef1097:    call   0x00007fa5df9c31e0
+            private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 of public class methods.Main @0x000000002f040000 @ bci = 14, line = 45
+            locals ([0], illegal) ([1], illegal) ([2], rbp, int)
+            expressions ([0], int 0) ([1], stack[16], double)
+                public static double calculateInvokeWithConversion(int, int) @0x00007fa5b4401af0 of public class methods.PanamaPowerCalculator @0x000000002f040420 @ bci = 5, line = 29
+                locals ([0], illegal) ([1], illegal) ([2], illegal)
+                    static double invoke_MT(java.lang.Object, int, int, java.lang.Object) @0x00007fa5b441b6b0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04c800 @0x000000002f04c800 @ bci = 15
+                    locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal)
+                        static void checkCustomized(java.lang.invoke.MethodHandle) @0x000000002e46ff68 of class java.lang.invoke.Invokers @0x000000002e201b60 @ bci = 9, line = 625
+                        locals ('mh', illegal)
+                        expressions ([0], oop null)
+
+OopMap:
+
+
+0x00007fa5dfef109c:    nopl   0x6000314(%rax,%rax,1)
+0x00007fa5dfef10a4:    mov    $0xffffffde,%esi
+0x00007fa5dfef10a9:    mov    (%rsp),%ebp
+0x00007fa5dfef10ac:    mov    %rax,0x8(%rsp)
+0x00007fa5dfef10b1:    xchg   %ax,%ax
+0x00007fa5dfef10b3:    call   0x00007fa5df9c31e0
+            private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 of public class methods.Main @0x000000002f040000 @ bci = 14, line = 45
+            locals ([0], illegal) ([1], illegal) ([2], rbp, int)
+            expressions ([0], int 0) ([1], stack[16], double)
+                public static double calculateInvokeWithConversion(int, int) @0x00007fa5b4401af0 of public class methods.PanamaPowerCalculator @0x000000002f040420 @ bci = 5, line = 29
+                locals ([0], illegal) ([1], illegal) ([2], illegal)
+                    static double invoke_MT(java.lang.Object, int, int, java.lang.Object) @0x00007fa5b441b6b0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04c800 @0x000000002f04c800 @ bci = 8
+                    locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal)
+                        static java.lang.invoke.MethodHandle checkGenericType(java.lang.invoke.MethodHandle, java.lang.invoke.MethodType) @0x000000002e470018 of class java.lang.invoke.Invokers @0x000000002e201b60 @ bci = 2, line = 541
+                        locals ('mh', illegal) ('expected', illegal)
+                            public final java.lang.invoke.MethodHandle asType(java.lang.invoke.MethodType) @0x000000002e4783e8 of public abstract class java.lang.invoke.MethodHandle @0x000000002e1ee598 @ bci = 12, line = 869
+                            locals ('this', illegal) ('newType', illegal) ([2], illegal)
+                                private java.lang.invoke.MethodHandle asTypeCached(java.lang.invoke.MethodType) @0x000000002e478390 of public abstract class java.lang.invoke.MethodHandle @0x000000002e1ee598 @ bci = 32, line = 883
+                                locals ('this', illegal) ('newType', illegal) ('atc', illegal) ('softCache', illegal)
+                                expressions ([0], stack[8], oop)
+
+OopMap:
+Oops:[8]
+
+
+0x00007fa5dfef10b8:    nopl   0x7000330(%rax,%rax,1)
+0x00007fa5dfef10c0:    jmp    0x00007fa5dfef10c2
+0x00007fa5dfef10c2:    mov    %rax,%rbp
+0x00007fa5dfef10c5:    jmp    0x00007fa5dfef10cf
+0x00007fa5dfef10c7:    mov    %rax,%rbp
+0x00007fa5dfef10ca:    jmp    0x00007fa5dfef10cf
+0x00007fa5dfef10cc:    mov    %rax,%rbp
+0x00007fa5dfef10cf:    mov    $0xffffff95,%esi
+0x00007fa5dfef10d4:    mov    %rax,-0x8(%rsp)
+0x00007fa5dfef10d9:    mov    0x8(%rsp),%eax
+0x00007fa5dfef10dd:    mov    %eax,(%rsp)
+0x00007fa5dfef10e0:    mov    -0x8(%rsp),%rax
+0x00007fa5dfef10e5:    xchg   %ax,%ax
+0x00007fa5dfef10e7:    call   0x00007fa5df9c31e0
+            private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 of public class methods.Main @0x000000002f040000 @ bci = 14, line = 45
+            locals ([0], illegal) ([1], illegal) ([2], stack[0], normal)
+            expressions ([0], int 0) ([1], stack[16], double)
+                public static double calculateInvokeWithConversion(int, int) @0x00007fa5b4401af0 of public class methods.PanamaPowerCalculator @0x000000002f040420 @ bci = 9, line = 30
+                locals ([0], illegal) ([1], illegal) ([2], illegal)
+                expressions ([0], rbp, oop)
+
+OopMap:
+Oops:rbp
+
+
+0x00007fa5dfef10ec:    nopl   0x8000364(%rax,%rax,1)
+0x00007fa5dfef10f4:    mov    $0xfffffff4,%esi
+0x00007fa5dfef10f9:    mov    (%rsp),%ebp
+0x00007fa5dfef10fc:    data16 xchg %ax,%ax
+0x00007fa5dfef10ff:    call   0x00007fa5df9c31e0
+            private static long runPanamaInvokeWithConversionPowerCalculator() @0x00007fa5b4400918 of public class methods.Main @0x000000002f040000 @ bci = 14, line = 45
+            locals ([0], illegal) ([1], illegal) ([2], rbp, int)
+            expressions ([0], int 0) ([1], stack[16], double)
+                public static double calculateInvokeWithConversion(int, int) @0x00007fa5b4401af0 of public class methods.PanamaPowerCalculator @0x000000002f040420 @ bci = 5, line = 29
+                locals ([0], illegal) ([1], illegal) ([2], illegal)
+                    static double invoke_MT(java.lang.Object, int, int, java.lang.Object) @0x00007fa5b441b6b0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04c800 @0x000000002f04c800 @ bci = 8
+                    locals ([0], illegal) ([1], rbp, int) ([2], int 2) ([3], illegal) ([4], illegal)
+                        static java.lang.invoke.MethodHandle checkGenericType(java.lang.invoke.MethodHandle, java.lang.invoke.MethodType) @0x000000002e470018 of class java.lang.invoke.Invokers @0x000000002e201b60 @ bci = 2, line = 541
+                        locals ('mh', illegal) ('expected', illegal)
+                            public final java.lang.invoke.MethodHandle asType(java.lang.invoke.MethodType) @0x000000002e4783e8 of public abstract class java.lang.invoke.MethodHandle @0x000000002e1ee598 @ bci = 12, line = 869
+                            locals ('this', oop 0x0000000715463a88) ('newType', oop 0x00000007154a6dc0) ([2], illegal)
+                                private java.lang.invoke.MethodHandle asTypeCached(java.lang.invoke.MethodType) @0x000000002e478390 of public abstract class java.lang.invoke.MethodHandle @0x000000002e1ee598 @ bci = 32, line = 883
+                                locals ('this', illegal) ('newType', oop 0x00000007154a6dc0) ('atc', illegal) ('softCache', illegal)
+                                expressions ([0], oop null)
+
+OopMap:
+
+
+0x00007fa5dfef1104:    nopl   0x900037c(%rax,%rax,1)
+0x00007fa5dfef110c:    movabs $0x7fa5dfef1040,%r10
+0x00007fa5dfef1116:    mov    %r10,0x538(%r15)
+0x00007fa5dfef111d:    jmp    0x00007fa5df987860
+0x00007fa5dfef1122:    sub    $0x8,%rsp
+0x00007fa5dfef1126:    vmovsd %xmm0,(%rsp)
+0x00007fa5dfef112b:    call   0x00007fa5df938118
+0x00007fa5dfef1130:    pop    %rax
+0x00007fa5dfef1131:    jmp    0x00007fa5dfef0f1c
+0x00007fa5dfef1136:    call   0x00007fa5df96cf60
+0x00007fa5dfef113b:    jmp    0x00007fa5dfef0e9a
+[Stub Code]
+0x00007fa5dfef1140:    movabs $0x0,%rbx
+0x00007fa5dfef114a:    jmp    0x00007fa5dfef114a
+0x00007fa5dfef114f:    movabs $0x0,%rbx
+0x00007fa5dfef1159:    jmp    0x00007fa5dfef1159
+0x00007fa5dfef115e:    movabs $0x0,%rbx
+0x00007fa5dfef1168:    jmp    0x00007fa5dfef1168
+0x00007fa5dfef116d:    movabs $0x0,%rbx
+0x00007fa5dfef1177:    jmp    0x00007fa5dfef1177
+[Exception Handler]
+0x00007fa5dfef117c:    jmp    0x00007fa5df9c34e0
+0x00007fa5dfef1181:    call   0x00007fa5dfef1186
+0x00007fa5dfef1186:    subq   $0x5,(%rsp)
+0x00007fa5dfef118b:    jmp    0x00007fa5df987b60
+0x00007fa5dfef1190:    call   0x00007fa5dfef1195
+0x00007fa5dfef1195:    subq   $0x5,(%rsp)
+0x00007fa5dfef119a:    jmp    0x00007fa5df987b60
+0x00007fa5dfef119f:    hlt

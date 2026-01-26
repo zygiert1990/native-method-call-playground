@@ -1,0 +1,11 @@
+Disassembly for compiled method [static native [synthetic] double linkToNative(long, double, double, java.lang.Object) @0x00007fa5b412f678 ] @0x00007fa5dfede888
+
+Method
+static native [synthetic] double linkToNative(long, double, double, java.lang.Object) @0x00007fa5b412f678 of public abstract class java.lang.invoke.MethodHandle @0x000000002e1ee598
+Compiled Code
+[Entry Point]
+[Verified Entry Point]
+0x00007fa5dfede980:    mov    0x10(%rdx),%r10
+0x00007fa5dfede984:    jmp    *%r10
+[Stub Code]
+0x00007fa5dfede987:    hlt

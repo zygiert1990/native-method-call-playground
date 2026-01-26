@@ -1,0 +1,5 @@
+instance of Oop for jdk/internal/foreign/abi/NativeEntryPoint @ 0x00000007157a5328 (size = 24)
+_mark: 1
+_metadata._compressed_klass: InstanceKlass for jdk/internal/foreign/abi/NativeEntryPoint
+methodType: Oop for java/lang/invoke/MethodType @ 0x0000000715730530
+downcallStubAddress: 140350398544864

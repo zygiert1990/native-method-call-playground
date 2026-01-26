@@ -1,0 +1,118 @@
+Disassembly for compiled method [private static long runPanamaJExtractPowerCalculator() @0x00007fa5b4400ac8 ] @0x00007fa5dfef1e08
+
+Method
+private static long runPanamaJExtractPowerCalculator() @0x00007fa5b4400ac8 of public class methods.Main @0x000000002f040000
+Compiled Code
+[Entry Point]
+[Verified Entry Point]
+0x00007fa5dfef1f20:    mov    %eax,-0x14000(%rsp)
+0x00007fa5dfef1f27:    push   %rbp
+0x00007fa5dfef1f28:    sub    $0x20,%rsp
+0x00007fa5dfef1f2c:    cmpl   $0x1,0x20(%r15)
+0x00007fa5dfef1f34:    jne    0x00007fa5dfef1fff
+0x00007fa5dfef1f3a:    xor    %ebp,%ebp
+0x00007fa5dfef1f3c:    vxorpd %xmm0,%xmm0,%xmm0
+0x00007fa5dfef1f40:    vxorpd %xmm1,%xmm1,%xmm1
+0x00007fa5dfef1f44:    jmp    0x00007fa5dfef1f61
+0x00007fa5dfef1f46:    data16 nopw 0x0(%rax,%rax,1)
+0x00007fa5dfef1f50:    vpxor  %xmm1,%xmm1,%xmm1
+0x00007fa5dfef1f54:    vcvtsi2sd %rax,%xmm1,%xmm1
+0x00007fa5dfef1f59:    vpxor  %xmm0,%xmm0,%xmm0
+0x00007fa5dfef1f5d:    vcvtsi2sd %ebp,%xmm0,%xmm0
+0x00007fa5dfef1f61:    vmovsd %xmm1,(%rsp)
+0x00007fa5dfef1f66:    movabs $0x7fa5f7a682b0,%rsi
+0x00007fa5dfef1f70:    vmovsd -0x78(%rip),%xmm1        # 0x00007fa5dfef1f00
+0x00007fa5dfef1f78:    movabs $0x7157a5328,%rdx
+0x00007fa5dfef1f82:    nop
+0x00007fa5dfef1f83:    call   0x00007fa5dfede980
+            private static long runPanamaJExtractPowerCalculator() @0x00007fa5b4400ac8 of public class methods.Main @0x000000002f040000 @ bci = 17, line = 61
+            locals ([0], illegal) ([1], illegal) ([2], rbp, int)
+            expressions ([0], int 0) ([1], stack[0], double)
+                public static double calculate(double, double) @0x00007fa5b441f340 of public class methods.PanamaJExtractPowerCalculator @0x000000002f04e000 @ bci = 2, line = 8
+                locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal)
+                    public static double pow(double, double) @0x00007fa5b441fc18 of public class math.NativeMath @0x000000002f04e420 @ bci = 38, line = 80
+                    locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal)
+                        static double invokeExact_MT(java.lang.Object, double, double, java.lang.Object) @0x00007fa5b4416ab0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04ac00 @0x000000002f04ac00 @ bci = 21
+                        locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal)
+                            static double invoke(java.lang.Object, double, double) @0x00007fa5b4422360 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04ec00 @0x000000002f04ec00 @ bci = 54
+                            locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal) ([6], illegal) ([7], illegal) ([8], illegal)
+                                static double invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, double, double) @0x00007fa5b4412288 of final class java.lang.invoke.LambdaForm$DMH+0x000000002f048800 @0x000000002f048800 @ bci = 16
+                                locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal) ([6], illegal) ([7], illegal)
+                                    public static double invoke(java.lang.foreign.SegmentAllocator, java.lang.foreign.MemorySegment, double, double) @0x00007fa5b4411be8 of public final class jdk.internal.foreign.abi.DowncallStub+0x000000002f048400 @0x000000002f048400 @ bci = 52
+                                    locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal) ([6], illegal) ([7], illegal) ([8], illegal) ([9], illegal) ([10], illegal) ([11], illegal) ([12], oop 0x000000071563ad08) ([13], oop 0x00000007159cc3e0) ([14], illegal) ([15], illegal)
+                                        static double invokeExact_MT(java.lang.Object, long, double, double, java.lang.Object) @0x00007fa5b44182b0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04b800 @0x000000002f04b800 @ bci = 23
+                                        locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal) ([6], illegal) ([7], illegal)
+                                            static double invoke(java.lang.Object, long, double, double) @0x00007fa5b44192d0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04c000 @0x000000002f04c000 @ bci = 16
+                                            locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal) ([6], illegal) ([7], illegal)
+
+OopMap:
+
+
+0x00007fa5dfef1f88:    nopl   0x180(%rax,%rax,1)
+0x00007fa5dfef1f90:    vaddsd (%rsp),%xmm0,%xmm0
+0x00007fa5dfef1f95:    vcvttsd2si %xmm0,%rax
+0x00007fa5dfef1f9a:    cmp    -0x5b9dc1(%rip),%rax        # 0x00007fa5df9381e0
+0x00007fa5dfef1fa1:    je     0x00007fa5dfef1fee
+0x00007fa5dfef1fa7:    inc    %ebp
+0x00007fa5dfef1fa9:    cmp    $0xf4240,%ebp
+0x00007fa5dfef1faf:    jl     0x00007fa5dfef1f50
+0x00007fa5dfef1fb1:    add    $0x20,%rsp
+0x00007fa5dfef1fb5:    pop    %rbp
+0x00007fa5dfef1fb6:    cmp    0x28(%r15),%rsp
+0x00007fa5dfef1fba:    ja     0x00007fa5dfef1fd8
+0x00007fa5dfef1fc0:    ret
+0x00007fa5dfef1fc1:    mov    $0xffffff95,%esi
+0x00007fa5dfef1fc6:    mov    %rax,0x8(%rsp)
+0x00007fa5dfef1fcb:    call   0x00007fa5df9c31e0
+            private static long runPanamaJExtractPowerCalculator() @0x00007fa5b4400ac8 of public class methods.Main @0x000000002f040000 @ bci = 17, line = 61
+            locals ([0], illegal) ([1], illegal) ([2], rbp, int)
+            expressions ([0], int 0) ([1], stack[0], double)
+                public static double calculate(double, double) @0x00007fa5b441f340 of public class methods.PanamaJExtractPowerCalculator @0x000000002f04e000 @ bci = 2, line = 8
+                locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal)
+                    public static double pow(double, double) @0x00007fa5b441fc18 of public class math.NativeMath @0x000000002f04e420 @ bci = 38, line = 80
+                    locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal)
+                        static double invokeExact_MT(java.lang.Object, double, double, java.lang.Object) @0x00007fa5b4416ab0 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04ac00 @0x000000002f04ac00 @ bci = 21
+                        locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal)
+                            static double invoke(java.lang.Object, double, double) @0x00007fa5b4422360 of final class java.lang.invoke.LambdaForm$MH+0x000000002f04ec00 @0x000000002f04ec00 @ bci = 54
+                            locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal) ([6], illegal) ([7], illegal) ([8], illegal)
+                                static double invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, double, double) @0x00007fa5b4412288 of final class java.lang.invoke.LambdaForm$DMH+0x000000002f048800 @0x000000002f048800 @ bci = 16
+                                locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal) ([6], illegal) ([7], illegal)
+                                    public static double invoke(java.lang.foreign.SegmentAllocator, java.lang.foreign.MemorySegment, double, double) @0x00007fa5b4411be8 of public final class jdk.internal.foreign.abi.DowncallStub+0x000000002f048400 @0x000000002f048400 @ bci = 80
+                                    locals ([0], illegal) ([1], illegal) ([2], illegal) ([3], illegal) ([4], illegal) ([5], illegal) ([6], illegal) ([7], illegal) ([8], illegal) ([9], illegal) ([10], illegal) ([11], illegal) ([12], oop 0x000000071563ad08) ([13], oop 0x00000007159cc3e0) ([14], illegal) ([15], illegal)
+                                    expressions ([0], stack[8], oop)
+
+OopMap:
+Oops:[8]
+
+
+0x00007fa5dfef1fd0:    nopl   0x10001c8(%rax,%rax,1)
+0x00007fa5dfef1fd8:    movabs $0x7fa5dfef1fb6,%r10
+0x00007fa5dfef1fe2:    mov    %r10,0x538(%r15)
+0x00007fa5dfef1fe9:    jmp    0x00007fa5df987860
+0x00007fa5dfef1fee:    sub    $0x8,%rsp
+0x00007fa5dfef1ff2:    vmovsd %xmm0,(%rsp)
+0x00007fa5dfef1ff7:    call   0x00007fa5df938118
+0x00007fa5dfef1ffc:    pop    %rax
+0x00007fa5dfef1ffd:    jmp    0x00007fa5dfef1fa7
+0x00007fa5dfef1fff:    call   0x00007fa5df96cf60
+0x00007fa5dfef2004:    jmp    0x00007fa5dfef1f3a
+0x00007fa5dfef2009:    hlt
+0x00007fa5dfef200a:    hlt
+0x00007fa5dfef200b:    hlt
+0x00007fa5dfef200c:    hlt
+0x00007fa5dfef200d:    hlt
+0x00007fa5dfef200e:    hlt
+0x00007fa5dfef200f:    hlt
+[Stub Code]
+0x00007fa5dfef2010:    movabs $0x0,%rbx
+0x00007fa5dfef201a:    jmp    0x00007fa5dfef201a
+[Exception Handler]
+0x00007fa5dfef201f:    jmp    0x00007fa5df9c34e0
+0x00007fa5dfef2024:    call   0x00007fa5dfef2029
+0x00007fa5dfef2029:    subq   $0x5,(%rsp)
+0x00007fa5dfef202e:    jmp    0x00007fa5df987b60
+0x00007fa5dfef2033:    hlt
+0x00007fa5dfef2034:    hlt
+0x00007fa5dfef2035:    hlt
+0x00007fa5dfef2036:    hlt
+0x00007fa5dfef2037:    hlt

@@ -1,0 +1,13 @@
+instance of Oop for java/lang/invoke/LambdaForm @ 0x0000000715496100 (size = 48)
+_mark: 1
+_metadata._compressed_klass: InstanceKlass for java/lang/invoke/LambdaForm
+arity: 3
+result: 8
+forceInline: true
+customized: Oop for java/lang/invoke/BoundMethodHandle$Species_LLLL @ 0x0000000715463a88
+names: ObjArray @ 0x0000000715496090
+kind: Oop for java/lang/invoke/LambdaForm$Kind @ 0x000000071584a3f0
+vmentry: Oop for java/lang/invoke/MemberName @ 0x000000071549e3c0
+isCompiled: true
+transformCache: Oop for java/lang/invoke/LambdaForm @ 0x00000007154638e8
+invocationCounter: 0

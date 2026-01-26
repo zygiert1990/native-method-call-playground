@@ -1,0 +1,77 @@
+Disassembly for compiled method [private static long runJNIPowerCalculator() @0x00007fa5b4400770 ] @0x00007fa5dfeef108
+
+Method
+private static long runJNIPowerCalculator() @0x00007fa5b4400770 of public class methods.Main @0x000000002f040000
+Compiled Code
+[Entry Point]
+[Verified Entry Point]
+0x00007fa5dfeef220:    mov    %eax,-0x14000(%rsp)
+0x00007fa5dfeef227:    push   %rbp
+0x00007fa5dfeef228:    sub    $0x20,%rsp
+0x00007fa5dfeef22c:    cmpl   $0x1,0x20(%r15)
+0x00007fa5dfeef234:    jne    0x00007fa5dfeef2e1
+0x00007fa5dfeef23a:    xor    %ebp,%ebp
+0x00007fa5dfeef23c:    vxorpd %xmm0,%xmm0,%xmm0
+0x00007fa5dfeef240:    vxorpd %xmm1,%xmm1,%xmm1
+0x00007fa5dfeef244:    jmp    0x00007fa5dfeef261
+0x00007fa5dfeef246:    data16 nopw 0x0(%rax,%rax,1)
+0x00007fa5dfeef250:    vpxor  %xmm1,%xmm1,%xmm1
+0x00007fa5dfeef254:    vcvtsi2sd %rax,%xmm1,%xmm1
+0x00007fa5dfeef259:    vpxor  %xmm0,%xmm0,%xmm0
+0x00007fa5dfeef25d:    vcvtsi2sd %ebp,%xmm0,%xmm0
+0x00007fa5dfeef261:    vmovsd %xmm1,(%rsp)
+0x00007fa5dfeef266:    vmovsd -0x6e(%rip),%xmm1        # 0x00007fa5dfeef200
+0x00007fa5dfeef26e:    nop
+0x00007fa5dfeef26f:    call   0x00007fa5dfecab90
+            private static long runJNIPowerCalculator() @0x00007fa5b4400770 of public class methods.Main @0x000000002f040000 @ bci = 17, line = 29
+            locals ([0], illegal) ([1], illegal) ([2], rbp, int)
+            expressions ([0], int 0) ([1], stack[0], double)
+
+OopMap:
+
+
+0x00007fa5dfeef274:    nopl   0x16c(%rax,%rax,1)
+0x00007fa5dfeef27c:    vaddsd (%rsp),%xmm0,%xmm0
+0x00007fa5dfeef281:    vcvttsd2si %xmm0,%rax
+0x00007fa5dfeef286:    cmp    -0x5b70ad(%rip),%rax        # 0x00007fa5df9381e0
+0x00007fa5dfeef28d:    je     0x00007fa5dfeef2d0
+0x00007fa5dfeef293:    inc    %ebp
+0x00007fa5dfeef295:    cmp    $0xf4240,%ebp
+0x00007fa5dfeef29b:    jl     0x00007fa5dfeef250
+0x00007fa5dfeef29d:    add    $0x20,%rsp
+0x00007fa5dfeef2a1:    pop    %rbp
+0x00007fa5dfeef2a2:    cmp    0x28(%r15),%rsp
+0x00007fa5dfeef2a6:    ja     0x00007fa5dfeef2ba
+0x00007fa5dfeef2ac:    ret
+0x00007fa5dfeef2ad:    mov    %rax,%rsi
+0x00007fa5dfeef2b0:    add    $0x20,%rsp
+0x00007fa5dfeef2b4:    pop    %rbp
+0x00007fa5dfeef2b5:    jmp    0x00007fa5dfa61a60
+0x00007fa5dfeef2ba:    movabs $0x7fa5dfeef2a2,%r10
+0x00007fa5dfeef2c4:    mov    %r10,0x538(%r15)
+0x00007fa5dfeef2cb:    jmp    0x00007fa5df987860
+0x00007fa5dfeef2d0:    sub    $0x8,%rsp
+0x00007fa5dfeef2d4:    vmovsd %xmm0,(%rsp)
+0x00007fa5dfeef2d9:    call   0x00007fa5df938118
+0x00007fa5dfeef2de:    pop    %rax
+0x00007fa5dfeef2df:    jmp    0x00007fa5dfeef293
+0x00007fa5dfeef2e1:    call   0x00007fa5df96cf60
+0x00007fa5dfeef2e6:    jmp    0x00007fa5dfeef23a
+0x00007fa5dfeef2eb:    hlt
+0x00007fa5dfeef2ec:    hlt
+0x00007fa5dfeef2ed:    hlt
+0x00007fa5dfeef2ee:    hlt
+0x00007fa5dfeef2ef:    hlt
+[Stub Code]
+0x00007fa5dfeef2f0:    movabs $0x0,%rbx
+0x00007fa5dfeef2fa:    jmp    0x00007fa5dfeef2fa
+[Exception Handler]
+0x00007fa5dfeef2ff:    jmp    0x00007fa5df9c34e0
+0x00007fa5dfeef304:    call   0x00007fa5dfeef309
+0x00007fa5dfeef309:    subq   $0x5,(%rsp)
+0x00007fa5dfeef30e:    jmp    0x00007fa5df987b60
+0x00007fa5dfeef313:    hlt
+0x00007fa5dfeef314:    hlt
+0x00007fa5dfeef315:    hlt
+0x00007fa5dfeef316:    hlt
+0x00007fa5dfeef317:    hlt

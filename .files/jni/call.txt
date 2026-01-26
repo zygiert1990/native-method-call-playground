@@ -1,0 +1,87 @@
+Disassembly for compiled method [public static native double calculate(double, double) @0x00007fa5b4401120 ] @0x00007fa5dfecaa88
+
+Method
+public static native double calculate(double, double) @0x00007fa5b4401120 of public class methods.JNIPowerCalculator @0x000000002f040210
+Compiled Code
+[Entry Point]
+0x00007fa5dfecab80:    xchg   %ax,%ax
+0x00007fa5dfecab82:    mov    0x8(%rsi),%r10d
+0x00007fa5dfecab86:    cmp    0x8(%rax),%r10d
+0x00007fa5dfecab8a:    jne    0x00007fa5df9853e0
+[Verified Entry Point]
+0x00007fa5dfecab90:    mov    %eax,-0x14000(%rsp)
+0x00007fa5dfecab97:    push   %rbp
+0x00007fa5dfecab98:    mov    %rsp,%rbp
+0x00007fa5dfecab9b:    sub    $0x40,%rsp
+0x00007fa5dfecab9f:    nop
+0x00007fa5dfecaba0:    cmpl   $0x1,0x20(%r15)
+0x00007fa5dfecaba8:    je     0x00007fa5dfecabaf
+0x00007fa5dfecabaa:    call   0x00007fa5df96cf60
+0x00007fa5dfecabaf:    movabs $0x715845970,%r14
+0x00007fa5dfecabb9:    mov    %r14,0x30(%rsp)
+0x00007fa5dfecabbe:    lea    0x30(%rsp),%r14
+0x00007fa5dfecabc3:    mov    %r14,%rsi
+OopMap:
+Oops:[48]
+
+
+0x00007fa5dfecabc6:    vzeroupper
+0x00007fa5dfecabc9:    movabs $0x7fa5dfecabc6,%r10
+0x00007fa5dfecabd3:    mov    %r10,0x488(%r15)
+0x00007fa5dfecabda:    mov    %rsp,0x480(%r15)
+0x00007fa5dfecabe1:    lea    0x4a0(%r15),%rdi
+0x00007fa5dfecabe8:    movl   $0x4,0x52c(%r15)
+0x00007fa5dfecabf3:    call   0x00007fa5f4273109
+0x00007fa5dfecabf8:    vzeroupper
+0x00007fa5dfecabfb:    movl   $0x5,0x52c(%r15)
+0x00007fa5dfecac06:    lock addl $0x0,-0x40(%rsp)
+0x00007fa5dfecac0c:    cmp    0x28(%r15),%rbp
+0x00007fa5dfecac10:    ja     0x00007fa5dfecac24
+0x00007fa5dfecac16:    cmpl   $0x0,0x528(%r15)
+0x00007fa5dfecac1e:    je     0x00007fa5dfecac4a
+0x00007fa5dfecac24:    vzeroupper
+0x00007fa5dfecac27:    vmovsd %xmm0,-0x8(%rbp)
+0x00007fa5dfecac2c:    mov    %r15,%rdi
+0x00007fa5dfecac2f:    mov    %rsp,%r12
+0x00007fa5dfecac32:    sub    $0x0,%rsp
+0x00007fa5dfecac36:    and    $0xfffffffffffffff0,%rsp
+0x00007fa5dfecac3a:    call   0x00007fa5f6c3cbb0
+0x00007fa5dfecac3f:    mov    %r12,%rsp
+0x00007fa5dfecac42:    xor    %r12,%r12
+0x00007fa5dfecac45:    vmovsd -0x8(%rbp),%xmm0
+0x00007fa5dfecac4a:    movl   $0x8,0x52c(%r15)
+0x00007fa5dfecac55:    cmpl   $0x2,0x5a8(%r15)
+0x00007fa5dfecac5d:    je     0x00007fa5dfecacbc
+0x00007fa5dfecac63:    movq   $0x0,0x480(%r15)
+0x00007fa5dfecac6e:    movq   $0x0,0x488(%r15)
+0x00007fa5dfecac79:    vzeroupper
+0x00007fa5dfecac7c:    mov    0x510(%r15),%rcx
+0x00007fa5dfecac83:    movl   $0x0,0x100(%rcx)
+0x00007fa5dfecac8d:    leave
+0x00007fa5dfecac8e:    testb  $0x1,0x28(%r15)
+0x00007fa5dfecac93:    je     0x00007fa5dfecacab
+0x00007fa5dfecac95:    movabs $0x7fa5dfecac8e,%r10
+0x00007fa5dfecac9f:    mov    %r10,0x538(%r15)
+0x00007fa5dfecaca6:    jmp    0x00007fa5df987860
+0x00007fa5dfecacab:    cmpq   $0x0,0x8(%r15)
+0x00007fa5dfecacb0:    jne    0x00007fa5dfecacb7
+0x00007fa5dfecacb6:    ret
+0x00007fa5dfecacb7:    jmp    0x00007fa5df937ee0
+0x00007fa5dfecacbc:    vzeroupper
+0x00007fa5dfecacbf:    vmovsd %xmm0,-0x8(%rbp)
+0x00007fa5dfecacc4:    mov    %rsp,%r12
+0x00007fa5dfecacc7:    sub    $0x0,%rsp
+0x00007fa5dfecaccb:    and    $0xfffffffffffffff0,%rsp
+0x00007fa5dfecaccf:    call   0x00007fa5f714ddd0
+0x00007fa5dfecacd4:    mov    %r12,%rsp
+0x00007fa5dfecacd7:    xor    %r12,%r12
+0x00007fa5dfecacda:    vmovsd -0x8(%rbp),%xmm0
+0x00007fa5dfecacdf:    jmp    0x00007fa5dfecac63
+[Stub Code]
+0x00007fa5dfecace1:    hlt
+0x00007fa5dfecace2:    hlt
+0x00007fa5dfecace3:    hlt
+0x00007fa5dfecace4:    hlt
+0x00007fa5dfecace5:    hlt
+0x00007fa5dfecace6:    hlt
+0x00007fa5dfecace7:    hlt

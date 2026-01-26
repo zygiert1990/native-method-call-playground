@@ -1,0 +1,9 @@
+instance of Oop for java/lang/invoke/MemberName @ 0x000000071549e3c0 (size = 48)
+_mark: 1
+_metadata._compressed_klass: InstanceKlass for java/lang/invoke/MemberName
+clazz: Oop for java/lang/Class @ 0x000000071549e2e8
+name: "invoke" @ 0x00000007ffe405a0
+type: Oop for java/lang/invoke/MethodType @ 0x00000007156ea9d8
+flags: 100728840
+method: Oop for java/lang/invoke/ResolvedMethodName @ 0x000000071549e3f0
+resolution: null

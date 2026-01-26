@@ -1,0 +1,23 @@
+Disassembly @ 0x00007fa5f4273109
+
+Code
+0x00007fa5f4273109:    push   %rbp
+0x00007fa5f427310a:    mov    %rsp,%rbp
+0x00007fa5f427310d:    sub    $0x20,%rsp
+0x00007fa5f4273111:    mov    %rdi,-0x8(%rbp)
+0x00007fa5f4273115:    mov    %rsi,-0x10(%rbp)
+0x00007fa5f4273119:    movsd  %xmm0,-0x18(%rbp)
+0x00007fa5f427311e:    movsd  %xmm1,-0x20(%rbp)
+0x00007fa5f4273123:    movsd  -0x20(%rbp),%xmm0
+0x00007fa5f4273128:    mov    -0x18(%rbp),%rax
+0x00007fa5f427312c:    movapd %xmm0,%xmm1
+0x00007fa5f4273130:    movq   %rax,%xmm0
+0x00007fa5f4273135:    call   0x00007fa5f4273030
+0x00007fa5f427313a:    movq   %xmm0,%rax
+0x00007fa5f427313f:    movq   %rax,%xmm0
+0x00007fa5f4273144:    leave
+0x00007fa5f4273145:    ret
+0x00007fa5f4273146:    add    %al,(%rax)
+0x00007fa5f4273148:    sub    $0x8,%rsp
+0x00007fa5f427314c:    add    $0x8,%rsp
+0x00007fa5f4273150:    ret

@@ -1,0 +1,13 @@
+instance of Oop for java/lang/invoke/BoundMethodHandle$Species_LLLL @ 0x0000000715463a88 (size = 48)
+_mark: 1
+_metadata._compressed_klass: InstanceKlass for java/lang/invoke/BoundMethodHandle$Species_LLLL
+type: Oop for java/lang/invoke/MethodType @ 0x00000007156aba48
+form: Oop for java/lang/invoke/LambdaForm @ 0x0000000715496100
+asTypeCache: Oop for java/lang/invoke/BoundMethodHandle$Species_LLLLL @ 0x00000007154ca1e8
+asTypeSoftCache: null
+customizationCount: 127
+updateInProgress: false
+argL0: Oop for java/lang/invoke/DirectMethodHandle @ 0x0000000715438298
+argL1: Oop for java/lang/invoke/DirectMethodHandle @ 0x00000007159ece40
+argL2: Oop for jdk/internal/foreign/abi/SharedUtils$$Lambda+0x000000002f0059b0 @ 0x0000000715605df8
+argL3: Oop for jdk/internal/foreign/NativeMemorySegmentImpl @ 0x000000071563ad28

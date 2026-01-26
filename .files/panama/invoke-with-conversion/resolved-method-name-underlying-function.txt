@@ -1,0 +1,11 @@
+Type is Method (size of 88)
+ConstMethod* Method::_constMethod: ConstMethod @ 0x00007fa5b4418ae0
+MethodData* Method::_method_data: MethodData @ 0x00007fa5b441a800
+MethodCounters* Method::_method_counters: MethodCounters @ 0x00007fa5b4418e30
+AccessFlags Method::_access_flags: 8
+int Method::_vtable_index: -2
+u2 Method::_intrinsic_id: 423
+nmethod* Method::_code: nmethod @ 0x00007fa5dfeef708
+address Method::_i2i_entry: address @ 0x00007fa5b4418b98
+address Method::_from_compiled_entry: address @ 0x00007fa5b4418ba0
+address Method::_from_interpreted_entry: address @ 0x00007fa5b4418bb0

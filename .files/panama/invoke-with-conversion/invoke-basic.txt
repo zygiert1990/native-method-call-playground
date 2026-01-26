@@ -1,0 +1,25 @@
+Disassembly for compiled method [final native [synthetic] double invokeBasic(int, int) @0x00007fa5b41678b8 ] @0x00007fa5dfee6788
+
+Method
+final native [synthetic] double invokeBasic(int, int) @0x00007fa5b41678b8 of public abstract class java.lang.invoke.MethodHandle @0x000000002e1ee598
+Compiled Code
+[Entry Point]
+[Verified Entry Point]
+0x00007fa5dfee6880:    mov    0x14(%rsi),%ebx
+0x00007fa5dfee6883:    shl    $0x3,%rbx
+0x00007fa5dfee6887:    mov    0x28(%rbx),%ebx
+0x00007fa5dfee688a:    shl    $0x3,%rbx
+0x00007fa5dfee688e:    mov    0x24(%rbx),%ebx
+0x00007fa5dfee6891:    shl    $0x3,%rbx
+0x00007fa5dfee6895:    mov    0x10(%rbx),%rbx
+0x00007fa5dfee6899:    test   %rbx,%rbx
+0x00007fa5dfee689c:    je     0x00007fa5dfee68a5
+0x00007fa5dfee68a2:    jmp    *0x40(%rbx)
+0x00007fa5dfee68a5:    jmp    0x00007fa5df985fe0
+[Stub Code]
+0x00007fa5dfee68aa:    hlt
+0x00007fa5dfee68ab:    hlt
+0x00007fa5dfee68ac:    hlt
+0x00007fa5dfee68ad:    hlt
+0x00007fa5dfee68ae:    hlt
+0x00007fa5dfee68af:    hlt

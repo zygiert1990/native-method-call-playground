@@ -1,0 +1,98 @@
+Disassembly for code blob Shared Runtime resolve_opt_virtual_call_blob [sun.jvm.hotspot.code.CodeBlob ] @0x00007fa5df985688
+
+CodeBlob
+
+Compiled Code
+0x00007fa5df9856e0:    push   %rbp
+0x00007fa5df9856e1:    mov    %rsp,%rbp
+0x00007fa5df9856e4:    pushf
+0x00007fa5df9856e5:    sub    $0x8,%rsp
+0x00007fa5df9856e9:    sub    $0x80,%rsp
+0x00007fa5df9856f0:    mov    %rax,0x78(%rsp)
+0x00007fa5df9856f5:    mov    %rcx,0x70(%rsp)
+0x00007fa5df9856fa:    mov    %rdx,0x68(%rsp)
+0x00007fa5df9856ff:    mov    %rbx,0x60(%rsp)
+0x00007fa5df985704:    mov    %rbp,0x50(%rsp)
+0x00007fa5df985709:    mov    %rsi,0x48(%rsp)
+0x00007fa5df98570e:    mov    %rdi,0x40(%rsp)
+0x00007fa5df985713:    mov    %r8,0x38(%rsp)
+0x00007fa5df985718:    mov    %r9,0x30(%rsp)
+0x00007fa5df98571d:    mov    %r10,0x28(%rsp)
+0x00007fa5df985722:    mov    %r11,0x20(%rsp)
+0x00007fa5df985727:    mov    %r12,0x18(%rsp)
+0x00007fa5df98572c:    mov    %r13,0x10(%rsp)
+0x00007fa5df985731:    mov    %r14,0x8(%rsp)
+0x00007fa5df985736:    mov    %r15,(%rsp)
+0x00007fa5df98573a:    sub    $0xa80,%rsp
+0x00007fa5df985741:    fxsave64 (%rsp)
+0x00007fa5df985746:    vzeroupper
+0x00007fa5df985749:    vzeroupper
+0x00007fa5df98574c:    mov    %rsp,0x480(%r15)
+0x00007fa5df985753:    mov    %r15,%rdi
+0x00007fa5df985756:    call   0x00007fa5f71563b0
+OopMap:
+Callee saved:[2808] = rax  [2800] = rcx  [2792] = rdx  [2784] = rbx  [2760] = rsi  [2752] = rdi  [2744] = r8  [2736] = r9  [2728] = r10  [2720] = r11  [2712] = r12  [2704] = r13  [2696] = r14  [2688] = r15  [160] = xmm0  [176] = xmm1  [192] = xmm2  [208] = xmm3  [224] = xmm4  [240] = xmm5  [256] = xmm6  [272] = xmm7  [288] = xmm8  [304] = xmm9  [320] = xmm10  [336] = xmm11  [352] = xmm12  [368] = xmm13  [384] = xmm14  [400] = xmm15  [2812] = rax  [2804] = rcx  [2796] = rdx  [2788] = rbx  [2764] = rsi  [2756] = rdi  [2748] = r8  [2740] = r9  [2732] = r10  [2724] = r11  [2716] = r12  [2708] = r13  [2700] = r14  [2692] = r15  [164] = xmm0  [180] = xmm1  [196] = xmm2  [212] = xmm3  [228] = xmm4  [244] = xmm5  [260] = xmm6  [276] = xmm7  [292] = xmm8  [308] = xmm9  [324] = xmm10  [340] = xmm11  [356] = xmm12  [372] = xmm13  [388] = xmm14  [404] = xmm15
+
+
+0x00007fa5df98575b:    movq   $0x0,0x480(%r15)
+0x00007fa5df985766:    movq   $0x0,0x488(%r15)
+0x00007fa5df985771:    vzeroupper
+0x00007fa5df985774:    cmpq   $0x0,0x8(%r15)
+0x00007fa5df985779:    jne    0x00007fa5df985809
+0x00007fa5df98577f:    mov    0x4e0(%r15),%rbx
+0x00007fa5df985786:    movq   $0x0,0x4e0(%r15)
+0x00007fa5df985791:    mov    %rbx,0xae0(%rsp)
+0x00007fa5df985799:    mov    %rax,0xaf8(%rsp)
+0x00007fa5df9857a1:    vzeroupper
+0x00007fa5df9857a4:    fxrstor64 (%rsp)
+0x00007fa5df9857a9:    add    $0xa80,%rsp
+0x00007fa5df9857b0:    mov    (%rsp),%r15
+0x00007fa5df9857b4:    mov    0x8(%rsp),%r14
+0x00007fa5df9857b9:    mov    0x10(%rsp),%r13
+0x00007fa5df9857be:    mov    0x18(%rsp),%r12
+0x00007fa5df9857c3:    mov    0x20(%rsp),%r11
+0x00007fa5df9857c8:    mov    0x28(%rsp),%r10
+0x00007fa5df9857cd:    mov    0x30(%rsp),%r9
+0x00007fa5df9857d2:    mov    0x38(%rsp),%r8
+0x00007fa5df9857d7:    mov    0x40(%rsp),%rdi
+0x00007fa5df9857dc:    mov    0x48(%rsp),%rsi
+0x00007fa5df9857e1:    mov    0x50(%rsp),%rbp
+0x00007fa5df9857e6:    mov    0x60(%rsp),%rbx
+0x00007fa5df9857eb:    mov    0x68(%rsp),%rdx
+0x00007fa5df9857f0:    mov    0x70(%rsp),%rcx
+0x00007fa5df9857f5:    mov    0x78(%rsp),%rax
+0x00007fa5df9857fa:    add    $0x80,%rsp
+0x00007fa5df985801:    add    $0x8,%rsp
+0x00007fa5df985805:    popf
+0x00007fa5df985806:    pop    %rbp
+0x00007fa5df985807:    jmp    *%rax
+0x00007fa5df985809:    vzeroupper
+0x00007fa5df98580c:    fxrstor64 (%rsp)
+0x00007fa5df985811:    add    $0xa80,%rsp
+0x00007fa5df985818:    mov    (%rsp),%r15
+0x00007fa5df98581c:    mov    0x8(%rsp),%r14
+0x00007fa5df985821:    mov    0x10(%rsp),%r13
+0x00007fa5df985826:    mov    0x18(%rsp),%r12
+0x00007fa5df98582b:    mov    0x20(%rsp),%r11
+0x00007fa5df985830:    mov    0x28(%rsp),%r10
+0x00007fa5df985835:    mov    0x30(%rsp),%r9
+0x00007fa5df98583a:    mov    0x38(%rsp),%r8
+0x00007fa5df98583f:    mov    0x40(%rsp),%rdi
+0x00007fa5df985844:    mov    0x48(%rsp),%rsi
+0x00007fa5df985849:    mov    0x50(%rsp),%rbp
+0x00007fa5df98584e:    mov    0x60(%rsp),%rbx
+0x00007fa5df985853:    mov    0x68(%rsp),%rdx
+0x00007fa5df985858:    mov    0x70(%rsp),%rcx
+0x00007fa5df98585d:    mov    0x78(%rsp),%rax
+0x00007fa5df985862:    add    $0x80,%rsp
+0x00007fa5df985869:    add    $0x8,%rsp
+0x00007fa5df98586d:    popf
+0x00007fa5df98586e:    pop    %rbp
+0x00007fa5df98586f:    movq   $0x0,0x4d8(%r15)
+0x00007fa5df98587a:    mov    0x8(%r15),%rax
+0x00007fa5df98587e:    jmp    0x00007fa5df937ee0
+0x00007fa5df985883:    hlt
+0x00007fa5df985884:    hlt
+0x00007fa5df985885:    hlt
+0x00007fa5df985886:    hlt
+0x00007fa5df985887:    hlt

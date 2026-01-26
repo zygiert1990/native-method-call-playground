@@ -1,0 +1,61 @@
+Disassembly for code blob nep_invoker_blob [sun.jvm.hotspot.code.CodeBlob ] @0x00007fa5dfa63b88
+
+CodeBlob
+
+Compiled Code
+0x00007fa5dfa63be0:    push   %rbp
+0x00007fa5dfa63be1:    mov    %rsp,%rbp
+0x00007fa5dfa63be4:    sub    $0x10,%rsp
+OopMap:
+
+
+0x00007fa5dfa63be8:    vzeroupper
+0x00007fa5dfa63beb:    mov    %rbp,0x490(%r15)
+0x00007fa5dfa63bf2:    movabs $0x7fa5dfa63be8,%r10
+0x00007fa5dfa63bfc:    mov    %r10,0x488(%r15)
+0x00007fa5dfa63c03:    mov    %rsp,0x480(%r15)
+0x00007fa5dfa63c0a:    movl   $0x4,0x52c(%r15)
+0x00007fa5dfa63c15:    mov    %rsi,%r10
+0x00007fa5dfa63c18:    call   *%r10
+0x00007fa5dfa63c1b:    vzeroupper
+0x00007fa5dfa63c1e:    movl   $0x5,0x52c(%r15)
+0x00007fa5dfa63c29:    lock addl $0x0,-0x40(%rsp)
+0x00007fa5dfa63c2f:    cmp    0x28(%r15),%rbp
+0x00007fa5dfa63c33:    ja     0x00007fa5dfa63c86
+0x00007fa5dfa63c39:    cmpl   $0x0,0x528(%r15)
+0x00007fa5dfa63c41:    jne    0x00007fa5dfa63c86
+0x00007fa5dfa63c47:    movl   $0x8,0x52c(%r15)
+0x00007fa5dfa63c52:    cmpl   $0x2,0x5a8(%r15)
+0x00007fa5dfa63c5a:    je     0x00007fa5dfa63cae
+0x00007fa5dfa63c60:    movq   $0x0,0x480(%r15)
+0x00007fa5dfa63c6b:    movq   $0x0,0x490(%r15)
+0x00007fa5dfa63c76:    movq   $0x0,0x488(%r15)
+0x00007fa5dfa63c81:    vzeroupper
+0x00007fa5dfa63c84:    leave
+0x00007fa5dfa63c85:    ret
+0x00007fa5dfa63c86:    vmovdqu %xmm0,(%rsp)
+0x00007fa5dfa63c8b:    mov    %r15,%rdi
+0x00007fa5dfa63c8e:    vzeroupper
+0x00007fa5dfa63c91:    mov    %rsp,%r12
+0x00007fa5dfa63c94:    sub    $0x0,%rsp
+0x00007fa5dfa63c98:    and    $0xfffffffffffffff0,%rsp
+0x00007fa5dfa63c9c:    call   0x00007fa5f6c3cbb0
+0x00007fa5dfa63ca1:    mov    %r12,%rsp
+0x00007fa5dfa63ca4:    xor    %r12,%r12
+0x00007fa5dfa63ca7:    vmovdqu (%rsp),%xmm0
+0x00007fa5dfa63cac:    jmp    0x00007fa5dfa63c47
+0x00007fa5dfa63cae:    vmovdqu %xmm0,(%rsp)
+0x00007fa5dfa63cb3:    vzeroupper
+0x00007fa5dfa63cb6:    mov    %rsp,%r12
+0x00007fa5dfa63cb9:    sub    $0x0,%rsp
+0x00007fa5dfa63cbd:    and    $0xfffffffffffffff0,%rsp
+0x00007fa5dfa63cc1:    call   0x00007fa5f714ddd0
+0x00007fa5dfa63cc6:    mov    %r12,%rsp
+0x00007fa5dfa63cc9:    xor    %r12,%r12
+0x00007fa5dfa63ccc:    vmovdqu (%rsp),%xmm0
+0x00007fa5dfa63cd1:    jmp    0x00007fa5dfa63c60
+0x00007fa5dfa63cd3:    hlt
+0x00007fa5dfa63cd4:    hlt
+0x00007fa5dfa63cd5:    hlt
+0x00007fa5dfa63cd6:    hlt
+0x00007fa5dfa63cd7:    hlt

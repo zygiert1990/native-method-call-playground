@@ -1,0 +1,4 @@
+instance of Oop for java/lang/invoke/ResolvedMethodName @ 0x000000071549e3f0 (size = 24)
+_mark: 1
+_metadata._compressed_klass: InstanceKlass for java/lang/invoke/ResolvedMethodName
+vmholder: Oop for java/lang/Class @ 0x000000071549e2e8
